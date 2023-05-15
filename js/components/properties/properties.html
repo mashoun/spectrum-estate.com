@@ -1,0 +1,68 @@
+<section class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="text-p bebas fs-1 m-0">Exceptional Living, Extraordinary Homes</h3>
+        <p class="pop">Discover the pinnacle of luxury living with our properties, crafted to perfection and tailored to your every need.</p>
+      </div>
+    </div>
+    <div class="row d-flex flex-column gap-3 my-3">
+        
+      <swiper-container init="false" init="false" id="properties-swiper" class="w-100" loop="true">
+        <swiper-slide v-for="p in properties" :key="p">
+          
+          <div class="position-relative shadow">
+            <div class="ratio ratio-3x4 overflow-hidden rounded">
+              <img :src="p.image" :alt="p.location" class="img-zoom img-brightness rounded img-fluid object-fit-cover">
+            </div>
+            <div class="w-100 position-absolute bottom-0 p-3 d-flex flex-column gap-2">
+              <small class="fs-smaller text-light text-uppercase">spectrum real estate</small>
+              <h4 class="fs-4 text-light pop text-fade d-flex align-items-center gap-2">
+                <span class="material-symbols-outlined">location_on</span>
+                <span class="m-0 text-fade">{{p.location}}</span>
+              </h4>
+              <div class="container">
+                <div class="row bg-glass rounded text-light py-2">
+                  <div class="col-3">
+                    <div class="d-flex flex-column gap-1">
+                      <span class="fs-xsmall">AREA</span>
+                      <span class="text-warning fs-small">{{p.area}} m2</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="d-flex flex-column gap-1">
+                      <span class="fs-xsmall">BATHROOM</span>
+                      <span class="text-warning fs-small">{{p.bathrooms}}</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="d-flex flex-column gap-1">
+                      <span class="fs-xsmall">BEDS</span>
+                      <span class="text-warning fs-small">{{p.beds}}</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="d-flex flex-column gap-1">
+                      <span class="fs-xsmall">PARKING</span>
+                      <span class="text-warning fs-small">{{p.parking}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-light ">{{p.type}} {{p.price}}</button>
+              
+            </div>
+
+          </div>
+        </swiper-slide>
+      </swiper-container>
+      
+    
+      <div class="col-12 d-flex justify-content-center">
+        <a href="" class="icon-link icon-link-hover text-center">
+          <span>show more</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+</section>

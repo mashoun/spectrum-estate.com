@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
+
+:root {
+    --action: #E6B325;
+    --primary: #30475E;
+    --secondary: #7E8A97;
+    --fade: #e7dec880;
+}
+
+.bebas {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+a {
+    color: inherit !important;
+}
+
+.pop {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-map{
+    background-image: url('../img/map4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+
+.bg-glass {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bg-transparent {
+    background: transparent !important;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Action */
+.bg-a {
+    background-color: var(--action);
+}
+
+.text-a {
+    color: var(--action);
+}
+
+/* Primary */
+.bg-p {
+    background-color: var(--primary);
+}
+
+.text-p {
+    color: var(--primary);
+}
+
+/* Secondary */
+.bg-s {
+    background-color: var(--secondary);
+}
+
+.text-s {
+    color: var(--secondary);
+}
+
+/* Fade */
+.bg-f {
+    background-color: var(--fade);
+}
+
+.text-f {
+    color: var(--fade);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--bs-dark);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-secondary);
+}
+
+.text-shadow{
+    -webkit-text-stroke: .7px black;
+    /* text-stroke: 1px black; */
+}
+.img-brightness{
+    filter:brightness(0.6);
+}
+
+.ls-2{
+    letter-spacing: 2px;
+}
+
+.ratio-9x16{
+    width: 100%;
+    aspect-ratio: 9/16;
+}
+.ratio-3x4{
+    width: 100%;
+    aspect-ratio: 3/4;
+}
+.property-info{
+    position: absolute;
+    bottom: 0;
+
+}
+
+
+.text-fade {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    position: relative;
+}
+
+.fs-small{
+    font-size: small;
+}
+.fs-smaller{
+    font-size: smaller;
+}
+.fs-xsmall{
+    font-size: x-small;
+}
+.fs-xxsmall{
+    font-size: xx-small;
+}
+
+
+.img-zoom:hover{
+    transform: scale(1.2);
+}
+
+.img-zoom{
+    transition: .3s ease-in-out !important;
+}
