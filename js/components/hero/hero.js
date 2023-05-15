@@ -9,7 +9,8 @@ export default {
                 delay: 2500,
                 disableOnInteraction: false,
             },
-            effect: window.innerWidth >= 768 ? 'fade' : 'cube',
+            // effect: window.innerWidth >= 768 ? 'fade' : 'cube',
+            effect:'fade',
             // grabCursor: true,
             cubeEffect: {
               shadow: true,
