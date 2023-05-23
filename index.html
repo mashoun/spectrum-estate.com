@@ -13,14 +13,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="./js/vue.global.js"></script>
+    
 </head>
 <body id="root">
-  
     <header-section></header-section>
     <hero-section :imgs="imgs"></hero-section>
     <main class="bg-map py-5">
       <properties-section :properties="properties"></properties-section>
     </main>
+    <section v-if="spinner" class="w-100 h-100 position-fixed z-3 top-0 d-flex justify-content-center align-items-center bg-glass">
+      <span class="spinner-grow text-light"></span>
+    </section>
     <!-- javascript -->
     <script src="./bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./js/swiper.min.js"></script>

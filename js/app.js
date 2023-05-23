@@ -3,6 +3,7 @@ const app = Vue.createApp({
     data(){
         return{
             title:'spectrum real estate',
+            spinner:true,
             imgs:[
                 // './img/8.jpg',
                 './img/5.jpg',
@@ -136,13 +137,20 @@ const app = Vue.createApp({
             ]
         }
     },
+    
     mounted(){
         
+        window.onload = () => {
+            this.spinner = false
+        }
+        window.onloadstart = () => {
+            this.spinner= true
+        }
         document.addEventListener('scroll',e => {
             // console.log(window.scrollY);
             if(window.scrollY >= 10) {
-                document.querySelector('header').classList.add('bg-glass')
-            }else document.querySelector('header').classList.remove('bg-glass')
+                document.querySelector('header').classList.add('bg-dark')
+            }else document.querySelector('header').classList.remove('bg-dark')
         })
     }
 })
