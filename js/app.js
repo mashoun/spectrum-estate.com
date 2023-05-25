@@ -5,13 +5,12 @@ const app = Vue.createApp({
             title:'spectrum real estate',
             spinner:true,
             imgs:[
-                // './img/8.jpg',
-                './img/5.jpg',
-                './img/1.jpg',
-                './img/7.jpg',
-                './img/2.jpg',
-                './img/6.jpg',
-                './img/4.jpg',
+                './img/sama-min.jpg',
+                './img/door-min.jpg',
+                './img/day3a-min.jpg',
+                './img/room-min.jpg',
+                './img/marfa2-min.jpg',
+                './img/room and door-min.jpg',
             ],
             properties:[
                 {
@@ -139,30 +138,19 @@ const app = Vue.createApp({
     },
     
     mounted(){
-        
-        window.onload = () => {
-            this.spinner = false
-        }
-        window.onloadstart = () => {
-            this.spinner= true
-        }
         document.addEventListener('scroll',e => {
             // console.log(window.scrollY);
             if(window.scrollY >= 10) {
                 document.querySelector('header').classList.add('bg-dark')
             }else document.querySelector('header').classList.remove('bg-dark')
         })
+        
     }
 })
 
+import title from './components/title/title.js'
+app.component('title-section',title)
 import header from './components/header/header.js'
 app.component('header-section',header)
-
-
-import hero from './components/hero/hero.js'
-app.component('hero-section',hero)
-
-import properties from './components/properties/properties.js'
-app.component('properties-section',properties)
 
 app.mount('#root')
