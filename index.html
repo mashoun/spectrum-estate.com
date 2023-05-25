@@ -17,12 +17,13 @@
 </head>
 <body id="app">
 
-  <swiper-container id="hero-swiper" :init="heroSwiperInit">
-    <h1 class="swiper-slide">Slide 1</h1>
-    <h1 class="swiper-slide">Slide 2</h1>
-    <h1 class="swiper-slide">Slide 3</h1>
-    <h1 class="swiper-slide">Slide 4</h1>
-  </swiper-container>
+  <navbar-section></navbar-section>
+  <hero-section></hero-section>
+  <main style="margin-top: 100px;">
+    <properties-section></properties-section>
+    <hr class="container my-5">
+    <agents-section></agents-section>
+  </main>
 
   <script src="./js/app.js" type="module"></script>
 </body>

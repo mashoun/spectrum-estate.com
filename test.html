@@ -13,7 +13,10 @@
 
 <body>
 
-    <!-- Swiper -->
+   <section class="container">
+    <div class="row">
+        <div class="col-12">
+             <!-- Swiper -->
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="https://picsum.photos/1080" width="100" class="img-fluid"></div>
@@ -24,6 +27,9 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
+        </div>
+    </div>
+   </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
@@ -31,9 +37,30 @@
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
 
         var swiper = new Swiper('.swiper', {
-            pagination: {
-                el: '.swiper-pagination',
-            },
+            slidesPerView: 1,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                loop:true,
+                pagination:{
+                    el:'.swiper-pagination'
+                },
+                spaceBetween: 20,
+                breakpoints: {
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                }
         });
     </script>
 

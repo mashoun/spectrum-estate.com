@@ -1,0 +1,21 @@
+<section class="container">
+    <div class="row g-3">
+        <div class="col-12">
+            <title-section title="Exceptional Living, Extraordinary Homes">Discover the pinnacle of luxury living with our properties, crafted to perfection and tailored to your every need.</title-section>
+        </div>
+        <div class="col-12">
+            <swiper-container id="properties-swiper" :init="swiperInit">
+                <div class="swiper-slide" v-for="p in properties" :key="p" >
+                    <property :data="p"></property>
+                </div>
+            </swiper-container>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <a class="icon-link icon-link-hover" href="#">
+                <span>show all properties</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</section>

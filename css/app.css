@@ -11,8 +11,16 @@
     font-family: 'Bebas Neue', sans-serif;
 }
 
-a {
-    color: inherit !important;
+nav > a {
+    padding: .2rem 1rem;
+    border-radius: .2rem;
+    transition: .3;
+    color: inherit;
+    text-decoration: none;
+}
+nav > a:hover{
+    background-color: #E6B325;
+    color: black !important;
 }
 
 .pop {
@@ -132,6 +140,13 @@ a {
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+    position: relative;
+}
+.text-fade-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     position: relative;
 }
 

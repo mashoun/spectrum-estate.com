@@ -1,0 +1,21 @@
+<section class="position-relative shadow">
+    <div class="ratio ratio-3x4 overflow-hidden rounded">
+        <img :src="data.image" :alt="data.name" class="img-zoom img-brightness rounded img-fluid object-fit-cover">
+    </div>
+    <div class="w-100 position-absolute bottom-0 p-3 d-flex flex-column gap-2">
+        <!-- <small class="fs-smaller text-light text-uppercase">spectrum real estate</small> -->
+        <h5 class="fs-5 text-light pop text-fade d-flex align-items-center gap-2">
+            <span class="material-symbols-outlined">real_estate_agent</span>
+            <span class="m-0 text-fade text-underline">{{data.name}}</span>
+        </h5>
+        <div class="bg-glass rounded p-2">
+            <p class="text-light m-0 pop fs-smaller text-fade-2">{{data.bio}}</p>
+        </div>
+        <button class="btn btn-sm btn-light ls-2 text-uppercase d-flex gap-2 align-items-center justify-content-center">
+            <span class="pop fs-small text-fade">Send message</span>
+            <!-- <span class="material-symbols-outlined fs-small">send</span> -->
+        </button>
+
+    </div>
+
+</section>

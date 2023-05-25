@@ -1,0 +1,14 @@
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <title-section title="Our Elite Property Experts">Experience the epitome of luxury real estate expertise with our elite team by your side.</title-section>
+        </div>
+        <div class="col-12">
+            <swiper-container id="agents-swiper" :init="agentsSwiper">
+                <div class="swiper-slide" v-for="a in agents" :key="a">
+                    <agent :data="a"></agent>
+                </div>
+            </swiper-container>
+        </div>
+    </div>
+</section>
