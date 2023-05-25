@@ -10,9 +10,10 @@ export default {
                     disableOnInteraction: false,
                 },
                 loop:true,
-                // pagination:{
-                //     el:'.swiper-pagination'
-                // },
+                pagination:{
+                    el:'.swiper-pagination',
+                    // dynamicBullets: true,
+                },
                 spaceBetween: 20,
                 breakpoints: {
                   640: {
@@ -71,16 +72,6 @@ export default {
                     image: 'https://picsum.photos/1083'
                 },
                 {
-                    location: 'Downtown',
-                    area: '300',
-                    beds: '4',
-                    bathrooms: '2',
-                    parking: '2',
-                    type: 'Rent',
-                    price: '3,500$',
-                    image: 'https://picsum.photos/1084'
-                },
-                {
                     location: 'Verdun',
                     area: '200',
                     beds: '3',
@@ -99,16 +90,6 @@ export default {
                     type: 'Rent',
                     price: '2,000$',
                     image: 'https://picsum.photos/1086'
-                },
-                {
-                    location: 'Museum',
-                    area: '100',
-                    beds: '1',
-                    bathrooms: '1',
-                    parking: '0',
-                    type: 'Sale',
-                    price: '120,000$',
-                    image: 'https://picsum.photos/1087'
                 },
                 {
                     location: 'Sodeco',
@@ -130,26 +111,6 @@ export default {
                     price: '180,000$',
                     image: 'https://picsum.photos/1089'
                 },
-                {
-                    location: 'Tabaris',
-                    area: '120',
-                    beds: '2',
-                    bathrooms: '1',
-                    parking: '1',
-                    type: 'Rent',
-                    price: '1,500$',
-                    image: 'https://picsum.photos/1090'
-                },
-                {
-                    location: 'Saifi',
-                    area: '180',
-                    beds: '3',
-                    bathrooms: '2',
-                    parking: '1',
-                    type: 'Sale',
-                    price: '220,000$',
-                    image: 'https://picsum.photos/1091'
-                }
             ]
         }
     }

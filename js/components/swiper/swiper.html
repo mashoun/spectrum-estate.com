@@ -1,4 +1,4 @@
-<div :class="id" class="overflow-hidden">
+<div :class="id" :class="{'overflow-hidden':!overflow}">
     <div class="swiper-wrapper">
       <slot></slot>
     </div>

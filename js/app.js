@@ -39,4 +39,10 @@ app.component('agent',agent)
 import agents from './components/agents/agents.js'
 app.component('agents-section',agents)
 
+import feedbacks from './components/feedbacks/feedbacks.js'
+app.component('feedbacks-section',feedbacks)
+
+import contact from './components/contact/contact.js'
+app.component('contact-section',contact)
+
 app.mount('#app')

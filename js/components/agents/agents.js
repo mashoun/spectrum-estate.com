@@ -48,10 +48,10 @@ export default {
                     delay: 2500,
                     disableOnInteraction: false,
                 },
-                loop:true,
-                // pagination:{
-                //     el:'.swiper-pagination'
-                // },
+                // loop:true,
+                pagination:{
+                    el:'.swiper-pagination'
+                },
                 spaceBetween: 20,
                 breakpoints: {
                   640: {

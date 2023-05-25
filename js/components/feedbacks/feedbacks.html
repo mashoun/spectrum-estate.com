@@ -1,0 +1,28 @@
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <title-section title="Glowing Feedback from Satisfied Clients">Enlighten Your Trust - Witness the Effulgent Testimonials Shared by Our Satisfied Clients.</title-section>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-12">
+            <swiper-container id="feedbacks-swiper" :init="feedbacksSwiper">
+                <div class="swiper-slide" v-for="f in feedbacks" :key="f">
+                    <div class="p-3 shadow-sm rounded position-relative pop d-flex flex-column">
+                        <!-- <div class="ratio ratio-1x1 position-absolute top-0 start-50 translate-middle" style="width: 80px;">
+                            <img :src="f.image" :alt="f.name" class="img-fluid object-fit-cover rounded-circle">
+                        </div> -->
+                        
+                        <i class="bi bi-quote text-end m-0 fs-3 text-warning"></i>
+                        <div class="ratio ratio-1x1 mx-auto" style="width: 80px;">
+                            <img :src="f.image" :alt="f.name" class="img-fluid object-fit-cover rounded-circle">
+                        </div>
+                        <h5 class="text-center fs-5 text-primary text-fade mt-3">{{f.name}}</h5>
+                        <h6 class="text-center fs-small text-primary opacity-75">{{f.job}}</h6>
+                        <p class="fs-smaller text-secondary text-fade-2 text-center">{{f.feedback}}</p>
+                    </div>
+                </div>
+            </swiper-container>
+        </div>
+    </div>
+</section>

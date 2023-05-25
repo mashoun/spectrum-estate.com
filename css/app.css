@@ -149,7 +149,14 @@ nav > a:hover{
     -webkit-line-clamp: 2;
     position: relative;
 }
-
+.text-warning-hover-links> a:hover{
+    color: var(--bs-warning) !important;
+    opacity: 0.8;
+}
+.text-warning-hover-links> span:hover{
+    color: var(--bs-warning) !important;
+    opacity: 0.8;
+}
 .fs-small{
     font-size: small;
 }
