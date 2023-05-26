@@ -1,9 +1,9 @@
 <section class="container">
     <div class="row gy-5 gx-3 justify-content-between pop">
-        <section class="col-12 col-lg-5">
+        <section class="col-md-12 col-lg-5">
             <div class="d-flex flex-column gap-1">
                 <h2 class="fs-4 text-light opacity-75 m-0">Spectrum Real Estate</h2>
-                <p class="fs-smaller text-light opacity-50">Our services cater to the unique needs of businesses within this niche, offering tailored solutions to help them achieve their goals and maximize their success.</p>
+                <p class="fs-smaller text-light opacity-50">Indulge in the ultimate expression of refined living as you discover Lebanon's most exquisite properties.</p>
                 <div class="d-flex flex-column gap-2 text-warning-hover-links">
                     <a :href="'mailto:'+contact.email" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
                         <i class="fs-5 bi bi-envelope text-secondary"></i>
@@ -29,11 +29,11 @@
                 </div>
             </div>
         </section>
-        <section class="col-12 col-lg-3">
+        <section class="col-md-12 col-lg-3">
             <div class="d-flex flex-column gap-1">
                 
                 <h2 class="fs-4 text-light opacity-75 m-0">Our Properties</h2>
-                <p class="fs-smaller text-light opacity-50">Discover the pinnacle of luxury living with our properties, crafted to perfection and tailored to your every need.</p>
+                <p class="fs-smaller text-light opacity-50">Discover the pinnacle of luxury living with our properties.</p>
                 <div class="d-flex flex-column gap-2 text-warning-hover-links">
                     <a 
                         v-for="link in links" :key="link"
@@ -45,24 +45,24 @@
                 </div>
             </div>
         </section>
-        <section class="col-12 col-lg-3">
+        <section class="col-md-12 col-lg-3">
             <div class="d-flex flex-column gap-1">
                 
-                <h2 class="fs-4 text-light opacity-75 m-0">Our Business Partners</h2>
-                <p class="fs-smaller text-light opacity-50">Connecting you to the resources you need.</p>
-                <div class="d-flex flex-column gap-2">
-                    <!-- <a 
-                        v-for="l in links" :key="l"
+                <h2 class="fs-4 text-light opacity-75 m-0">Check also</h2>
+                <p class="fs-smaller text-light opacity-50">Expand Your Options - Connecting you to the resources you need.</p>
+                <div class="d-flex flex-column gap-2 text-warning-hover-links">
+                    <a 
+                        v-for="l in checkAlso" :key="l"
                         :href="l.url" 
                         class="link-underline-opacity-0 link-underline text-secondary m-0 d-flex align-items-center gap-1">
                         <span class="material-symbols-outlined fs-4">link</span>
-                        <span class="text-fade">{{l.text}}</span>
-                    </a> -->
+                        <span class="text-fade">{{l.title}}</span>
+                    </a>
                 </div>
             </div>
         </section>
     </div>
 </section>
 
-<!-- <hr class="container my-5 text-light">
-<h6 class="fs-small text-light text-center d-flex justify-content-center opacity-75 cin ls-2 pop">Developed by <a class="text-light" href="https://libancode.com"> Libancode</a></h6> -->
+<hr class="container my-4 text-light">
+<a class="text-secondary pop link-underline link-underline-opacity-0 text-center" href="https://libancode.com"><h6 class="fs-smaller">Developed by Libancode</h6></a>

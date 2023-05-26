@@ -33,6 +33,28 @@ export default {
                     title:'Warehouse',
                     url:'#'
                 },
+            ],
+            checkAlso:[
+                {
+                    title:'Home Page',
+                    url:'#'
+                },
+                {
+                    title:'Our Agents',
+                    url:'#'
+                },
+                {
+                    title:'Our properties',
+                    url:'#'
+                },
+                {
+                    title:'Terms and conditions',
+                    url:'#'
+                },
+                {
+                    title:'Privacy policy',
+                    url:'#'
+                },
             ]
         }
     }

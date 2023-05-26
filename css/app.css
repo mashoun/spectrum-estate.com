@@ -5,14 +5,16 @@
     --primary: #30475E;
     --secondary: #7E8A97;
     --fade: #e7dec880;
+    --bs-warning:red !important;
 }
+
 
 .bebas {
     font-family: 'Bebas Neue', sans-serif;
 }
 
 nav > a {
-    padding: .2rem 1rem;
+    padding: .2rem .5rem;
     border-radius: .2rem;
     transition: .3;
     color: inherit;
