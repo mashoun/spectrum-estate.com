@@ -6,14 +6,12 @@ const app = Vue.createApp({
     },
     mounted(){
         
-        document.addEventListener('scroll',e => {
-            // console.log(window.scrollY);
-            if(window.scrollY >= 10) {
-                document.querySelector('header').classList.add('bg-dark')
-            }else document.querySelector('header').classList.remove('bg-dark')
-        })
+
     }
 })
+
+import searchBar from './components/search-bar/search-bar.js'
+app.component('search-bar',searchBar)
 
 import swiper from './components/swiper/swiper.js'
 app.component('swiper-container',swiper)

@@ -24,5 +24,13 @@ export default {
                 },
             }
         }
+    },
+    mounted(){
+        document.addEventListener('scroll',e => {
+            // console.log(window.scrollY);
+            if(window.scrollY >= 10) {
+                document.querySelector('header').classList.add('bg-dark')
+            }else document.querySelector('header').classList.remove('bg-dark')
+        })
     }
 }
