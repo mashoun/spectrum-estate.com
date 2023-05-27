@@ -5,6 +5,7 @@
     --primary: #30475E;
     --secondary: #7E8A97;
     --fade: #e7dec880;
+    --light-blue:#edf2fb;
 }
 
 
@@ -65,6 +66,10 @@ nav > a:hover{
 /* Primary */
 .bg-p {
     background-color: var(--primary);
+}
+/* light blue */
+.bg-lb {
+    background-color: var(--light-blue);
 }
 
 .text-p {

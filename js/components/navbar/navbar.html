@@ -3,12 +3,53 @@
       <h1 class="fs-3 ls-2 bebas text-shadoww m-0 text-center text-md-start">Spectrum Real Estate</h1>
     </section>
     
-    <search-bar class="d-none"></search-bar>
     <nav class="d-none d-md-flex gap-3 align-items-center pop text-uppercase fs-5"> 
       <a href="#"><i class="bi bi-whatsapp"></i></a>
       <a href="#"><i class="bi bi-facebook"></i></a>
       <a href="#"><i class="bi bi-instagram"></i></a>
-      <!-- <button class="btn btn-sm px-3 btn-warning">Contact</button> -->
     </nav>
-    <button class="search-icon d-block d-md-none btn btn-outline-warning"><i class="bi bi-search text-light"></i></button>
+    <button class="search-icon d-none btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button>
+   
+    <aside class="offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" style="width:350px;"  tabindex="-1" id="searchbar" aria-labelledby="searchbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title pop" id="searchbarLabel">Find Your Perfect Property</h5>
+        <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
+        <i class="bi bi-x-lg"  data-bs-dismiss="offcanvas"></i>
+      </div>
+      <div class="offcanvas-body d-flex gap-3 flex-column">
+        <div class="input-group">
+          <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-geo-alt-fill"></i></label>
+          <select class="form-select" id="inputGroupSelect01">
+            <option selected>Location</option>
+            <option value="Ashrafeye">Ashrafeye</option>
+            <option value="Ashrafeye">Dawra</option>
+            <option value="Ashrafeye">Jounieh</option>
+            <option value="Ashrafeye">Jbeil</option>
+            <option value="Ashrafeye">Downtown</option>
+            <option value="Ashrafeye">Mkaless</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-buildings-fill"></i></label>
+          <select class="form-select" id="inputGroupSelect01">
+            <option selected>Property type</option>
+            <option value="Ashrafeye">Appartment</option>
+            <option value="Ashrafeye">Villas</option>
+            <option value="Ashrafeye">Lands</option>
+            <option value="Ashrafeye">Offices</option>
+            <option value="Ashrafeye">Warehouse</option>
+          </select>
+        </div>
+        <div class="px-1 d-flex gap-3 flex-column">
+          <label for="customRange3" class="form-label">Bedrooms</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.5">
+          <label for="customRange3" class="form-label">Bathrooms</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.5">
+          <label for="customRange3" class="form-label">Price</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.5">
+        </div>
+        <button class="btn btn-outline-warning">Search</button>
+      </div>
+    </aside>
+   
 </header>

@@ -5,12 +5,12 @@ export default {
     mounted() {
         document.addEventListener('scroll', e => {
             console.log(window.scrollY);
-            if (window.scrollY >= 600 && window.innerWidth >= 768) {
-                document.querySelector('.search-bar').classList.add('scale-up-center')
-                document.querySelector('.search-bar').classList.remove('d-none')
+            if (window.scrollY >= 600) {
+                document.querySelector('.search-icon').classList.add('scale-up-center')
+                document.querySelector('.search-icon').classList.remove('d-none')
                 document.querySelector('nav').classList.remove('d-md-flex')
             } else {
-                document.querySelector('.search-bar').classList.add('d-none')
+                document.querySelector('.search-icon').classList.add('d-none')
                 document.querySelector('nav').classList.add('d-md-flex')
             }
         })
