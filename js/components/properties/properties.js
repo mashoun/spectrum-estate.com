@@ -1,8 +1,10 @@
 import utilities from "../../utilities.js"
 export default {
     template: await utilities.getPage('./js/components/properties/properties.html'),
+    
     data(){
         return{
+            block:false,
             swiperInit:{
                 slidesPerView: 1,
                 autoplay: {
@@ -113,5 +115,5 @@ export default {
                 },
             ]
         }
-    }
+    },
 }

@@ -1,15 +1,43 @@
-<section class="search-bar">
+<slot></slot>
+<aside class="offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" style="width:350px;"  tabindex="-1" id="searchbar" aria-labelledby="searchbarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title pop" id="searchbarLabel">Find Your Perfect Property</h5>
+    <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
+    <i class="bi bi-x-lg"  data-bs-dismiss="offcanvas"></i>
+  </div>
+  <div class="offcanvas-body d-flex gap-3 flex-column">
+    
     <div class="input-group">
-        <select class="form-select" style="width: 400px;">
-            <option selected value="">Search for a property</option>
-            <option value="Ashrafeye">Ashrafeye</option>
-            <option value="Ashrafeye">Dawra</option>
-            <option value="Ashrafeye">Jounieh</option>
-            <option value="Ashrafeye">Jbeil</option>
-            <option value="Ashrafeye">Downtown</option>
-            <option value="Ashrafeye">Mkaless</option>
-        </select>
-        <button class="btn btn-outline-warning d-flex gap-2 align-items-center"><i class="bi bi-filter"></i></button>
-        <button class="btn btn-warning d-flex gap-2 align-items-center"><i class="bi bi-search"></i></button>
+      <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-buildings-fill"></i></label>
+      <select class="form-select" id="inputGroupSelect01">
+        <option selected>Property type</option>
+        <option value="Ashrafeye">Appartment</option>
+        <option value="Ashrafeye">Villas</option>
+        <option value="Ashrafeye">Lands</option>
+        <option value="Ashrafeye">Offices</option>
+        <option value="Ashrafeye">Warehouse</option>
+      </select>
     </div>
-</section>
+    <div class="input-group">
+      <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-geo-alt-fill"></i></label>
+      <select class="form-select" id="inputGroupSelect01">
+        <option selected>Location</option>
+        <option value="Ashrafeye">Ashrafeye</option>
+        <option value="Ashrafeye">Dawra</option>
+        <option value="Ashrafeye">Jounieh</option>
+        <option value="Ashrafeye">Jbeil</option>
+        <option value="Ashrafeye">Downtown</option>
+        <option value="Ashrafeye">Mkaless</option>
+      </select>
+    </div>
+    <div class="px-1 d-flex gap-3 flex-column">
+      <label for="customRange3" class="form-label">Bedrooms</label>
+      <input type="range" class="form-range" min="0" max="5" step="0.5">
+      <label for="customRange3" class="form-label">Bathrooms</label>
+      <input type="range" class="form-range" min="0" max="5" step="0.5">
+      <label for="customRange3" class="form-label">Price</label>
+      <input type="range" class="form-range" min="0" max="5" step="0.5">
+    </div>
+    <button class="btn btn-outline-warning">Search</button>
+  </div>
+</aside>
