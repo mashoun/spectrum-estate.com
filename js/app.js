@@ -114,6 +114,9 @@ app.component('property',property)
 import properties from './components/properties/properties.js'
 app.component('properties-section',properties)
 
+import propertyPage from './components/property-page/property-page.js'
+app.component('property-page',propertyPage)
+
 import agent from './components/agent/agent.js'
 app.component('agent',agent)
 
@@ -126,16 +129,18 @@ app.component('feedbacks-section',feedbacks)
 import contact from './components/contact/contact.js'
 app.component('contact-section',contact)
 
-// const About = { template: '<div>About</div>' }
-// const routes = [
-//     { path: '/', component: About },
-//     { path: '/about', component: About },
-// ]
-// const router = VueRouter.createRouter({
-//     // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-//     history: VueRouter.createWebHashHistory(),
-//     routes, // short for `routes: routes`
-// })
 
-// app.use(router)
+
+const About = { template: '<div>About</div>' }
+const routes = [
+    { path: '/', component: propertyPage },
+    { path: '/about', component: About },
+]
+const router = VueRouter.createRouter({
+    // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
+    history: VueRouter.createWebHashHistory(),
+    routes, // short for `routes: routes`
+})
+
+app.use(router)
 app.mount('#app')

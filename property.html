@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spectrum Real Estate</title>
+  <title>Spectrum Properties</title>
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/responsive.css">
   <link rel="stylesheet" href="./css/animations.css">
@@ -14,24 +14,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <script src="./js/vue.global.js"></script>
   <script src="./js/router.vue.min.js"></script>
-
     
 </head>
-<body id="app"  class="bg-lb">
+<body id="app" class="bg-lb">
 
   <navbar-section></navbar-section>
-  <hero-section></hero-section>
-  <main style="margin-top: 100px;">
-    <properties-section></properties-section>
-    <hr class="container my-5">
-    <agents-section></agents-section>
-    <hr class="container my-5">
-    <feedbacks-section></feedbacks-section>
+  <main style="margin-top: 100px; min-height: 500px;" class="pb-5">
+    <router-view></router-view>
   </main>
   <footer class="w-100 pb-4 mt-5 bg-dark">
     <contact-section></contact-section>
   </footer>
-
   <script src="./bootstrap/bootstrap.bundle.min.js"></script>
   <script src="./js/app.js" type="module"></script>
 </body>

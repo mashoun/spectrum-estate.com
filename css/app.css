@@ -29,6 +29,10 @@ nav > a:hover{
     font-family: 'Poppins', sans-serif;
 }
 
+.point{
+    cursor: pointer;
+}
+
 .bg-map{
     background-image: url('../img/map4.jpg');
     background-size: cover;
