@@ -6,7 +6,7 @@
                 <i class="bi bi-chevron-compact-right"></i>
                 <span class="text-primary opacity-75">Properties</span>
                 <i class="bi bi-chevron-compact-right"></i>
-                <span class="text-secondary">Location of the property</span>
+                <span class="text-secondary">{{myProperty.location}}</span>
             </section>
         </div>
         <div class="col-12 col-lg-7">
@@ -31,9 +31,11 @@
         <div class="col-12 col-lg-5">
 
             <section class="pop d-flex flex-column gap-3">
+                
+                <small class="pop text-secondary ls-2">{{myProperty.type}}</small>
                 <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-geo-alt fill fs-5 text-warning"></i>
-                    <h1 class="m-0 fs-4 text-primary fw-bold ls-2 text-uppercase">Location</h1>
+                    <i class="bi bi-geo-alt fill fs-4 text-secondary"></i>
+                    <h1 class="m-0 fs-4 text-primary fw-bold ls-2 text-uppercase">{{myProperty.location}}</h1>
                 </div>
                 <p class="text-secondary fs-small mx-2 m-0">Discover a property that redefines what it means to live in luxury, with a suite of amenities that exceed expectations.</p>
     
@@ -41,37 +43,33 @@
                     <div class="row bg-warning rounded text-light py-2">
                         <div class="col-3">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">AREA</span>
-                                <span class="text-dark fs-small">100 m2</span>
+                                <span class="fs-xsmall text-dark">AREA</span>
+                                <span class="text-dark fs-small fw-bold">{{myProperty.area}}</span>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3"  v-show="!switchType(myProperty.type)">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">BATHROOM</span>
-                                <span class="text-dark fs-small">2</span>
+                                <span class="fs-xsmall text-dark">BATHROOM</span>
+                                <span class="text-dark fs-small fw-bold">{{myProperty.bathrooms}}</span>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3"  v-show="!switchType(myProperty.type)">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">BEDS</span>
-                                <span class="text-dark fs-small">3</span>
+                                <span class="fs-xsmall text-dark">BEDS</span>
+                                <span class="text-dark fs-small fw-bold">{{myProperty.beds}}</span>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3"  v-show="!switchType(myProperty.type)">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">PARKING</span>
-                                <span class="text-dark fs-small">1</span>
+                                <span class="fs-xsmall text-dark">PARKING</span>
+                                <span class="text-dark fs-small fw-bold">{{myProperty.parking}}</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <ul class="list-group list-group-flush fs-small rounded">
                     <li class="list-group-item ls-2 fw-bold">Amenities:</li>
-                    <li class="list-group-item text-secondary"><i class="bi bi-check2"></i> Pool</li>
-                    <li class="list-group-item text-secondary"><i class="bi bi-check2"></i> Private Garden</li>
-                    <li class="list-group-item text-secondary"><i class="bi bi-check2"></i> Solar Energy</li>
-                    <li class="list-group-item text-secondary"><i class="bi bi-check2"></i> Concrete Flooring</li>
-                    <li class="list-group-item text-secondary"><i class="bi bi-check2"></i> Maid Room</li>
+                    <li class="list-group-item text-secondary" v-for="a in myProperty.amenities" :key="a"><i class="bi bi-check2"></i> {{a}}</li>
                 </ul>
                 <button class="btn btn-sm btn-outline-dark d-flex gap-2 align-items-center justify-content-center">
                     
