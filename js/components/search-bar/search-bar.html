@@ -5,40 +5,49 @@
     <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
     <i class="bi bi-x-lg"  data-bs-dismiss="offcanvas"></i>
   </div>
-  <div class="offcanvas-body d-flex gap-3 flex-column">
+  <div class="offcanvas-body d-flex gap-3 flex-column fs-smaller">
     
-    <h6>Property type ?</h6>
-    <div class="input-group">
-      <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-buildings-fill"></i></label>
-      <select v-model="property.type" class="form-select" id="inputGroupSelect01">
-        <option v-for="type in recentPropertyTypes" :key="type" :value="type">{{type}}</option>
-      </select>
+    <div class="">
+      <h6>Property type ?</h6>
+      <div class="input-group">
+        <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-buildings-fill"></i></label>
+        <select v-model="property.type" class="form-select" id="inputGroupSelect01">
+          <option v-for="type in recentPropertyTypes" :key="type" :value="type">{{type}}</option>
+        </select>
+      </div>
     </div>
-    <h6>Property location ?</h6>
-    <div class="input-group">
-      <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-geo-alt-fill"></i></label>
-      <select v-model="property.location" class="form-select" id="inputGroupSelect01">
-        <option v-for="location in recentLocations" :key="location" :value="location">{{location}}</option>
-      </select>
+
+
+    <div class="">
+      <h6>Property location ?</h6>
+      <div class="input-group">
+        <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-geo-alt-fill"></i></label>
+        <select v-model="property.location" class="form-select" id="inputGroupSelect01">
+          <option v-for="location in recentLocations" :key="location" :value="location">{{location}}</option>
+        </select>
+      </div>
     </div>
     
-    <h6>Property status ?</h6>
-    <div class="input-group">
-      <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-cash-coin"></i></label>
-      <select v-model="property.status" class="form-select" id="inputGroupSelect01">
-        <option v-for="s in recentPropertyStatus" :key="s" :value="s">{{s}}</option>
-      </select>
+    <div class="">
+      <h6>Property status ?</h6>
+      <div class="input-group">
+        <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-cash-coin"></i></label>
+        <select v-model="property.status" class="form-select" id="inputGroupSelect01">
+          <option v-for="s in recentPropertyStatus" :key="s" :value="s">{{s}}</option>
+        </select>
+      </div>   
     </div>
-    <div class="px-1 d-flex gap-3 flex-column">
-      <label for="customRange3" class="form-label">Bedrooms</label>
-      <input type="range" class="form-range" min="1" max="20" step="0.5">
-      <label for="customRange3" class="form-label">Bathrooms</label>
-      <input type="range" class="form-range" min="1" max="10" step="0.5">
-      <label for="customRange3" class="form-label">Price {{maxPriceWithComma}} USD</label>
-      <input type="range" v-model="property.price" class="form-range" min="100" :max="maxPrice" step="1000">
+    <div class="px-1 d-flex gap-2 flex-column">
+      <label class="form-label ls-2">Area {{property.area}} m2</label>
+      <input type="range" v-model="property.area" class="form-range" min="100" max="1000" step="50">
+      <label class="form-label ls-2">Bedrooms {{property.beds}}</label>
+      <input type="range" v-model="property.beds" class="form-range" min="1" max="20" step="1">
+      <label class="form-label ls-2">Bathrooms {{property.bathrooms}}</label>
+      <input type="range" v-model="property.bathrooms" class="form-range" min="1" max="10" step="1">
+      <label class="form-label ls-2">Price {{maxPriceWithComma}} USD</label>
+      <input type="range" v-model="property.price" class="form-range" min="100" :max="maxPrice" :step="step">
     </div>
-    <button class="btn btn-warning">Search</button>
-    {{maxPrice}}
+    <a :href="utilities.env(`/properties/${query}`)" class="btn btn-warning">Search</a>
     
   </div>
 </aside>

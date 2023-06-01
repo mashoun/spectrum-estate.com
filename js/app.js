@@ -131,10 +131,10 @@ const app = Vue.createApp({
 
             
             if (url.searchParams.get('bathrooms')) fp = fp.filter(p => {
-                if (p.bathrooms) return url.searchParams.get('bathrooms').toLowerCase() == p.bathrooms.toLowerCase()
+                if (p.bathrooms) return parseFloat(url.searchParams.get('bathrooms')) >= parseFloat(p.bathrooms)
             })
             if (url.searchParams.get('beds')) fp = fp.filter(p => {
-                if (p.beds) return url.searchParams.get('beds').toLowerCase() == p.beds.toLowerCase()
+                if (p.beds)  return parseFloat(url.searchParams.get('beds')) >= parseFloat(p.beds)
             })
 
 

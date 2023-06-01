@@ -1,15 +1,28 @@
+function env(path) {
+    if (location.href.includes('http://127.0.0.1:5500/')) {
+        // this is in dev mode
+        return path;
+    } else {
+        if (location.href.includes('spectrum-realestate.github.io')) {
+            // in production mode
+            // add /app/ directory to all links
+            return '/app' + path
+        }
+        return path
+    }
+}
 function getPage(path) {
     var origin = new URL(location.href).origin
-    if(origin.includes('spectrum-realestate.github.io')) origin += '/app'
+    if (origin.includes('spectrum-realestate.github.io')) origin += '/app'
     return new Promise((resolve, reject) => {
-        console.log(origin);
+        // console.log(origin);
         fetch(`${origin}/${path}`).then(res => res.text()).then(res => {
             resolve(res)
         })
-        .catch(err => {
-            console.log(err);
-            reject(err)
-        })
+            .catch(err => {
+                console.log(err);
+                reject(err)
+            })
     })
 }
 function getDistinctValues(array) {
@@ -31,5 +44,6 @@ function addCommas(number) {
 export default {
     getPage,
     getDistinctValues,
-    addCommas
+    addCommas,
+    env
 }

@@ -1,4 +1,4 @@
-<a :href="'/property/?id='+data.id">
+<a :href="utilities.env('/property/?id='+data.id)">
     <section class="position-relative shadow">
         <div class="ratio ratio-3x4 overflow-hidden rounded">
             <img :src="data.thumbnail" :alt="data.location" class="skeleton img-zoom img-brightness rounded img-fluid object-fit-cover">
