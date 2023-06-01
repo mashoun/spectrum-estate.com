@@ -4,6 +4,7 @@ export default {
     props: ['properties'],
     data() {
         return {
+            utilities,
             initSwiper: {
                 slidesPerView: 1,
                 autoplay: {
