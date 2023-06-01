@@ -1,5 +1,5 @@
 function getPage(path) {
-    const origin = new URL(location.href).origin
+    var origin = new URL(location.href).origin
     if(origin.includes('spectrum-realestate.github.io')) origin += '/app'
     return new Promise((resolve, reject) => {
         console.log(origin);
