@@ -1,13 +1,15 @@
 function getPage(path) {
     const origin = new URL(location.href).origin
+    if(origin.includes('spectrum-realestate.github.io')) origin += '/app'
     return new Promise((resolve, reject) => {
+        console.log(origin);
         fetch(`${origin}/${path}`).then(res => res.text()).then(res => {
             resolve(res)
         })
-            .catch(err => {
-                console.log(err);
-                resolve(err)
-            })
+        .catch(err => {
+            console.log(err);
+            reject(err)
+        })
     })
 }
 function getDistinctValues(array) {
