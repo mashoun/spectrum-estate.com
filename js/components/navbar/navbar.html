@@ -1,6 +1,6 @@
-<header class="w-100 text-light p-3 position-fixed z-3 top-0 start-0 d-flex justify-content-between align-items-center">
+<header class="w-100 text-light p-3 position-fixed z-2 top-0 start-0 d-flex justify-content-between align-items-center">
     <section>
-      <h1 class="fs-3 ls-2 bebas text-shadoww m-0 text-center text-md-start">Spectrum Real Estate</h1>
+      <a class="no-decoration" :href="utilities.env('/')" ><h1 class="fs-3 ls-2 bebas text-shadoww m-0 text-center text-md-start">Spectrum Real Estate</h1></a>
     </section>
     
     <!-- <nav class="d-none d-md-flex gap-3 align-items-center pop text-uppercase fs-5"> 
@@ -9,7 +9,7 @@
       <a href="#"><i class="bi bi-instagram"></i></a>
     </nav> -->
 
-    <search-bar :properties="properties">
+    <search-bar :properties="store.profile.properties">
       <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button>
     </search-bar>
    

@@ -16,8 +16,10 @@
     
 </head>
 <body id="app">
-
-  <navbar-section :properties="properties"></navbar-section>
+  <section v-if="spinner" class="w-100 h-100 position-fixed top-0 start-0 z-3 bg-light d-flex justify-content-center align-items-center">
+    <span class="spinner-grow text-secondary"></span>
+  </section>
+  <navbar-section></navbar-section>
   <main style="margin-top: 100px; min-height: 500px;" class="pb-5">
   
     <section class="container">
@@ -28,6 +30,13 @@
       </div>
       <div class="row g-3">
         <div class="col-12 col-md-6 col-lg-4" v-for="p in filteredProperties" :key="p"> <property :data="p"></property> </div>
+      </div>
+    </section>
+    <section v-if="filteredProperties.length == 0" class="container">
+      <div class="row">
+        <div class="col-12">
+          <small>No such property</small>
+        </div>
       </div>
     </section>
   </main>

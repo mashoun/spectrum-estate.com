@@ -8,6 +8,10 @@
     --light-blue:#edf2fb;
 }
 
+.no-decoration{
+    text-decoration: none !important;
+    color: inherit;
+}
 
 .bebas {
     font-family: 'Bebas Neue', sans-serif;

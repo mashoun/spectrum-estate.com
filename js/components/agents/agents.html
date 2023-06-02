@@ -5,7 +5,7 @@
         </div>
         <div class="col-12">
             <swiper-container id="agents-swiper" :init="agentsSwiper">
-                <div class="swiper-slide" v-for="a in agents" :key="a">
+                <div class="swiper-slide" v-for="a in store.profile.agents" :key="a">
                     <agent :data="a"></agent>
                 </div>
             </swiper-container>

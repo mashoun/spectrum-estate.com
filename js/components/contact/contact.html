@@ -5,26 +5,26 @@
                 <h2 class="fs-4 text-light opacity-75 m-0">Spectrum Real Estate</h2>
                 <p class="fs-smaller text-light opacity-50">Indulge in the ultimate expression of refined living as you discover Lebanon's most exquisite properties.</p>
                 <div class="d-flex flex-column gap-2 text-warning-hover-links">
-                    <a :href="'mailto:'+contact.email" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+                    <a :href="'mailto:'+store.profile.contact.email" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
                         <i class="fs-5 bi bi-envelope text-secondary"></i>
-                        <span>{{contact.email}}</span>
+                        <span>{{store.profile.contact.email}}</span>
                     </a>
-                    <a :href="'https://wa.me/'+contact.whatsapp" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+                    <a :href="'https://wa.me/'+store.profile.contact.whatsapp" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
                         <i class="fs-5 bi bi-whatsapp text-secondary"></i>
-                        <span>+{{contact.number}}</span>
+                        <span>+{{store.profile.contact.number}}</span>
                     </a>
-                    <a :href="contact.facebook" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+                    <a :href="store.profile.contact.facebook" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
                         <i class="fs-5 bi bi-facebook text-secondary"></i>
                         <span>Facebook</span>
                     </a>
-                    <a :href="contact.instagram" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+                    <a :href="store.profile.contact.instagram" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
                         <i class="fs-5 bi bi-instagram text-secondary"></i>
                         <span>Instagram</span>
                     </a>
                     
                     <span class="text-secondary d-flex gap-3 align-items-center">
                         <i class="fs-5 bi bi-geo-alt-fill text-secondary"></i>
-                        <span>{{contact.address}}</span>
+                        <span>{{store.profile.contact.address}}</span>
                     </span>
                 </div>
             </div>

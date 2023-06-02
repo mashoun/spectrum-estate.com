@@ -52,7 +52,7 @@ export default {
             if(this.property.location) url += `&location=${this.property.location}`
             if(this.property.status) url += `&status=${this.property.status}`
             if(this.property.price) url += `&price=${this.property.price}`
-            if(this.property.beds) url += `&beds=${this.property.beds}`
+            if(this.property.bedrooms) url += `&bedrooms=${this.property.bedrooms}`
             if(this.property.bathrooms) url += `&bathrooms=${this.property.bathrooms}`
             if(this.property.area) url += `&area=${this.property.area}`
             return url

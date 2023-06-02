@@ -1,4 +1,4 @@
-<a :href="utilities.env('/property/?id='+data.id)">
+<a :href="utilities.env('/property/?id='+data.index)">
     <section class="position-relative shadow">
         <div class="ratio ratio-3x4 overflow-hidden rounded">
             <img :src="data.thumbnail" :alt="data.location" class="skeleton img-zoom img-brightness rounded img-fluid object-fit-cover">
@@ -17,19 +17,19 @@
                             <span class="text-warning fs-small">{{data.area}} m2</span>
                         </div>
                     </div>
-                    <div class="col-3" v-show="!switchType(data.type)">
+                    <div class="col-3">
                         <div class="d-flex flex-column gap-1">
                             <span class="fs-xsmall">BATHROOM</span>
                             <span class="text-warning fs-small">{{data.bathrooms}}</span>
                         </div>
                     </div>
-                    <div class="col-3" v-show="!switchType(data.type)">
+                    <div class="col-3">
                         <div class="d-flex flex-column gap-1">
                             <span class="fs-xsmall">BEDS</span>
-                            <span class="text-warning fs-small">{{data.beds}}</span>
+                            <span class="text-warning fs-small">{{data.bedrooms}}</span>
                         </div>
                     </div>
-                    <div class="col-3" v-show="!switchType(data.type)">
+                    <div class="col-3">
                         <div class="d-flex flex-column gap-1">
                             <span class="fs-xsmall">PARKING</span>
                             <span class="text-warning fs-small">{{data.parking}}</span>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-sm btn-light fw-bold ls-2 text-uppercase"><span class="pop">{{data.status}} {{data.price}}</span></button>
+            <button class="btn btn-sm btn-light fw-bold ls-2 text-uppercase"><span class="pop">For {{data.status}} - {{data.price}} $</span></button>
     
         </div>
     
