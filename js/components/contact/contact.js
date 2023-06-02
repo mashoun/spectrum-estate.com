@@ -1,62 +1,56 @@
 import utilities from "../../utilities.js"
+import store from '../../store.js'
 export default {
     template: await utilities.getPage('./js/components/contact/contact.html'),
-    props:['title'],
     data(){
         return{
-            contact:{
-                whatsapp:'http://wa.spectrum-estate.com',
-                facebook:'http://fb.mashoun.com',
-                instagram:'http://ig.mashoun.com',
-                email:'info@spectrum-estate.com',
-                number:'96170696906',
-                address:'Dekwaneh, Mkalles highway, Debabas ST, RAAD BLDG 6th floor'
-            },
+            store,
+            utilities,
             links:[
                 {
                     title:'Appartments',
-                    url:'#'
+                    url:`${utilities.env('/properties/?type=Apartments')}`
                 },
                 {
                     title:'Villas',
-                    url:'#'
+                    url:`${utilities.env('/properties/?type=Villas')}`
                 },
                 {
                     title:'Lands',
-                    url:'#'
+                    url:`${utilities.env('/properties/?type=Lands')}`
                 },
                 {
                     title:'Offices',
-                    url:'#'
+                    url:`${utilities.env('/properties/?type=Offices')}`
                 },
                 {
                     title:'Warehouse',
-                    url:'#'
+                    url:`${utilities.env('/properties/?type=Warehouse')}`
                 },
             ],
             checkAlso:[
                 {
                     title:'Home Page',
-                    url:'#'
+                    url:`${utilities.env('/')}`
                 },
                 {
                     title:'Our Agents',
-                    url:'#'
+                    url:`${utilities.env('/#agents')}`
                 },
                 {
                     title:'Our properties',
-                    url:'#'
+                    url:`${utilities.env('/properties/')}`
                 },
                 {
                     title:'Terms and conditions',
-                    url:'#'
+                    url:`${utilities.env('/terms.html')}`
                 },
                 {
                     title:'Privacy policy',
-                    url:'#'
+                    url:`${utilities.env('/privacy-policy.html')}`
                 },
-            ]
+            ],
         }
-    }
+    },
     
 }

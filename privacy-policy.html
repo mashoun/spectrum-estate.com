@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spectrum Real Estate</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="./js/vue.global.js"></script>
+
+    
+</head>
+<body id="app"  class="bg-lb">
+
+  <section v-if="spinner" class="w-100 h-100 position-fixed top-0 start-0 z-3 bg-light d-flex justify-content-center align-items-center">
+    <span class="spinner-grow text-secondary"></span>
+  </section>
+  <navbar-section></navbar-section>
+  <main style="margin-top: 100px;">
+    <section class="container">
+      <div class="row">
+        <div class="col-12">
+          <b>Privacy Policy</b><br><br>Effective Date: 10 June 2023<br><br>At Spectrum Real Estate, we are committed to protecting the privacy and security of the personal information you provide to us through our website. This Privacy Policy outlines how we collect, use, and safeguard your information when you use our website.<br><br>1. Information We Collect<br>When you visit our website, we may collect certain personally identifiable information (PII) that you voluntarily provide to us. This may include your name, email address, phone number, and any other information you choose to provide through our contact forms or registration processes.<br><br>2. Use of Information<br>We may use the information collected from you for various purposes, including but not limited to:<br>- Responding to your inquiries and providing customer support.<br>- Sending you requested information or updates about our services.<br>- Personalizing your experience on our website.<br>- Conducting market research and improving our services.<br>- Complying with legal obligations and protecting our rights.<br><br>3. Third-Party Disclosure<br>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties without your consent. However, we may share your information with trusted third-party service providers who assist us in operating our website, conducting business, or servicing you, as long as they agree to keep your information confidential.<br><br>4. Data Security<br>We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, please note that no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee the absolute security of your data.<br><br>5. Cookies and Tracking Technologies<br>We may use cookies and other tracking technologies on our website to enhance your browsing experience. Cookies are small files that a website or its service provider transfers to your computer's hard drive through your web browser, enabling the site's or service provider's systems to recognize your browser and capture certain information. You can choose to accept or decline cookies through your browser settings.<br><br>6. Links to Third-Party Websites<br>Our website may contain links to third-party websites that are not operated by us. We are not responsible for the privacy practices or content of these websites. We encourage you to review the privacy policies of these third-party sites before providing any personal information.<br><br>7. Children's Privacy<br>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected personal information from a child without parental consent, we will take steps to remove the information from our servers.<br><br>8. Changes to this Privacy Policy<br>We reserve the right to modify or update this Privacy Policy at any time. Any changes will be effective immediately upon posting the updated policy on our website. We encourage you to review this Privacy Policy periodically for any changes.<br><br>9. Contact Us<br>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at info@spectrum-estate.com.<br><br>By using our website, you consent to the terms outlined in this Privacy Policy.<br><br><br><br>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="w-100 pb-4 mt-5 bg-dark">
+    <contact-section></contact-section>
+  </footer>
+
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./js/app.js" type="module"></script>
+</body>
+</html>

@@ -17,9 +17,12 @@
 </head>
 <body id="app" class="bg-lb">
 
-  <navbar-section :properties="properties"></navbar-section>
+  <section v-if="spinner" class="w-100 h-100 position-fixed top-0 start-0 z-3 bg-light d-flex justify-content-center align-items-center">
+    <span class="spinner-grow text-secondary"></span>
+  </section>
+  <navbar-section></navbar-section>
   <main style="margin-top: 100px; min-height: 500px;" class="pb-5">
-    <property-page :properties="properties"></property-page>
+    <property-page></property-page>
   </main>
   <footer class="w-100 pb-4 mt-5 bg-dark">
     <contact-section></contact-section>

@@ -1,8 +1,10 @@
 import utilities from "../../utilities.js"
+import store from '../../store.js'
 export default {
     template: await utilities.getPage('./js/components/hero/hero.html'),
     data(){
         return{
+            store,
             slides:[
                 './img/day3a-min.jpg',
                 './img/door-min.jpg',

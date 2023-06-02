@@ -1,7 +1,8 @@
 import utilities from "../../utilities.js"
+import store from "../../store.js"
 export default {
     template: await utilities.getPage('./js/components/properties/properties.html'),
-    props:['properties'],
+    
     data(){
         return{
             block:false,
@@ -32,6 +33,7 @@ export default {
                   },
                 }
             },
+            store
         }
     },
 }

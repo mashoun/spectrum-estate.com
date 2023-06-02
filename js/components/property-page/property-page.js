@@ -1,9 +1,11 @@
 import utilities from "../../utilities.js"
+import store from '../../store.js'
 export default {
     template: await utilities.getPage('./js/components/property-page/property-page.html'),
-    props: ['properties'],
+    // props: ['properties'],
     data() {
         return {
+            store,
             utilities,
             initSwiper: {
                 slidesPerView: 1,
@@ -32,29 +34,54 @@ export default {
                 //   },
                 // }
             },
-            myProperty: {}
+            missingProperty:false,
 
+        }
+    },
+    computed:{
+        myProperty(){
+
+            const url = new URL(location.href)
+            var id = url.searchParams.get('id')
+            console.log(id);
+            var properties = this.store.profile.properties
+            if(id){
+                for(let i = 0 ; i < properties.length ; i++){
+                    if(properties[i].index == `${id}`){
+                        console.log(properties[i]);
+                        return properties[i]
+                    }
+                }
+                
+                this.missingProperty = false
+            }else{
+                this.missingProperty = true
+                
+            }
+            return {
+                "index": "0",
+                "date": "",
+                "id": "",
+                "thumbnail": "",
+                "images": "",
+                "type": "",
+                "location": "",
+                "status": "",
+                "price": "",
+                "area": "",
+                "amenities": "",
+                "bedrooms": "",
+                "bathrooms": "",
+                "parking": ""
+            }
         }
     },
     methods:{
-        switchType(type){
-            return type == 'Lands' || type == 'Warehouse'
-        }
+        
     },
     mounted() {
 
-        const url = new URL(location.href)
-        var id = url.searchParams.get('id')
-        if(id){
-            // console.log(id);
-            this.properties.forEach(p => {
-                if(p.id == id) {
-                    this.myProperty = p
-                }
-            });
-        }
-
-        id = 0
+        
         
     }
 }
