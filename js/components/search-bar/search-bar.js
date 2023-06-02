@@ -7,7 +7,7 @@ export default {
             property: {
                 location: '',
                 area: '',
-                beds: '',
+                bedrooms: '',
                 bathrooms: '',
                 type: '',
                 status: '',
