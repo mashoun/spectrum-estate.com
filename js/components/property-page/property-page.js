@@ -34,7 +34,7 @@ export default {
                 //   },
                 // }
             },
-            missingProperty:false,
+            propertyExist:true,
 
         }
     },
@@ -52,10 +52,6 @@ export default {
                         return properties[i]
                     }
                 }
-                
-                this.missingProperty = false
-            }else{
-                this.missingProperty = true
                 
             }
             return {

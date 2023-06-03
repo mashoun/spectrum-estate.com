@@ -12,11 +12,11 @@
         </div>
         <div class="col-12 d-flex justify-content-center">
             <!-- <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button> -->
-            <small data-bs-toggle="offcanvas" data-bs-target="#searchbar" class="pop point">Search all properties</small>
-            <!-- <a class="icon-link icon-link-hover" href="/properties">
-                <small>search all properties</small>
+            <!-- <small data-bs-toggle="offcanvas" data-bs-target="#searchbar" class="pop point">Search all properties</small> -->
+            <a :href="utilities.env('/properties')" class="icon-link icon-link-hover" href="/properties">
+                <small>Search all properties</small>
                 <i class="bi bi-arrow-right"></i>
-            </a> -->
+            </a>
         </div>
         
     </div>

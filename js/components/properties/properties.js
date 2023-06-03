@@ -33,7 +33,8 @@ export default {
                   },
                 }
             },
-            store
+            store,
+            utilities
         }
     },
 }

@@ -1,4 +1,4 @@
-<section v-if="!missingProperty" class="container">
+<section v-if="myProperty.id" class="container">
     <div class="row justify-content-between g-3">
         <div class="col-12">
             <section class="w-100 mb-3 bg-light shadow-sm rounded d-flex align-items-center fs-small pop p-3">
@@ -68,6 +68,11 @@
         </div>
     </div>  
 </section>
-<section v-else>
-    <small>property is missing</small>
+<section class="container" v-else>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center flex-column gap-3 my-5">
+          <span class="material-symbols-outlined fs-1">real_estate_agent</span>
+          <h6 class="pop fs-6">No such Property <i class="bi bi-dot"></i> <a :href="utilities.env('/')">back</a> </h6>
+        </div>
+      </div>
 </section>

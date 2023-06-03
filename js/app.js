@@ -1,4 +1,5 @@
 import store from './store.js'
+import utilities from './utilities.js'
 const app = Vue.createApp({
     data() {
         return {
@@ -6,7 +7,8 @@ const app = Vue.createApp({
             spinner: false,
             api: 'https://script.google.com/macros/s/AKfycbyV7JY10hCStCNKVo_mLbhNcAzXFkHviUFYStVM6xdjWhkRJ4LZiyzQg2K7XJU8s3YpBw/exec',
             // propertyIsFound:false,
-            store
+            store,
+            utilities
 
         }
     },
