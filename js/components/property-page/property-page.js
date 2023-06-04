@@ -35,6 +35,7 @@ export default {
                 // }
             },
             propertyExist:true,
+            invalidProperty:false
 
         }
     },
@@ -53,7 +54,7 @@ export default {
                     }
                 }
                 
-            }
+            }else this.invalidProperty = true
             return {
                 "index": "0",
                 "date": "",
