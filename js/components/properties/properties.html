@@ -5,7 +5,7 @@
         </div>
         <div class="col-12">
             <swiper-container id="properties-swiper" :init="swiperInit">
-                <div class="swiper-slide" v-for="p in store.profile.properties" :key="p" >
+                <div class="swiper-slide" v-for="p in store.profile.properties.slice(-12).reverse()" :key="p" >
                     <property :data="p"></property>
                 </div>
             </swiper-container>

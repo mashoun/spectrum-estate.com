@@ -12,7 +12,7 @@ export default {
                     delay: 2500,
                     disableOnInteraction: false,
                 },
-                loop:true,
+                // loop:true,
                 pagination:{
                     el:'.swiper-pagination',
                     // dynamicBullets: true,
