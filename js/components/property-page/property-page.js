@@ -34,7 +34,8 @@ export default {
                 //   },
                 // }
             },
-            missingProperty:false,
+            propertyExist:true,
+            invalidProperty:false
 
         }
     },
@@ -53,11 +54,7 @@ export default {
                     }
                 }
                 
-                this.missingProperty = false
-            }else{
-                this.missingProperty = true
-                
-            }
+            }else this.invalidProperty = true
             return {
                 "index": "0",
                 "date": "",

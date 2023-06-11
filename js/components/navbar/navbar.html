@@ -1,6 +1,12 @@
 <header class="w-100 text-light p-3 position-fixed z-2 top-0 start-0 d-flex justify-content-between align-items-center">
     <section>
-      <a class="no-decoration" :href="utilities.env('/')" ><h1 class="fs-3 ls-2 bebas text-shadoww m-0 text-center text-md-start">Spectrum Real Estate</h1></a>
+      <a class="no-decoration" :href="utilities.env('/')" >
+        <div class="d-flex align-items-center gap-2">
+          
+          <img :src="store.profile.contact.logo" alt="logo" width="50" class="img-fluid">
+          <h1 class="fs-3 ls-2 bebas text-shadoww m-0 text-center text-md-start m-0">Spectrum Real Estate</h1>
+        </div>
+      </a>
     </section>
     
     <!-- <nav class="d-none d-md-flex gap-3 align-items-center pop text-uppercase fs-5"> 

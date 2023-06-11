@@ -5,18 +5,18 @@
         </div>
         <div class="col-12">
             <swiper-container id="properties-swiper" :init="swiperInit">
-                <div class="swiper-slide" v-for="p in store.profile.properties" :key="p" >
+                <div class="swiper-slide" v-for="p in store.profile.properties.slice(-12).reverse()" :key="p" >
                     <property :data="p"></property>
                 </div>
             </swiper-container>
         </div>
         <div class="col-12 d-flex justify-content-center">
             <!-- <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button> -->
-            <small data-bs-toggle="offcanvas" data-bs-target="#searchbar" class="pop point">Search all properties</small>
-            <!-- <a class="icon-link icon-link-hover" href="/properties">
-                <small>search all properties</small>
+            <!-- <small data-bs-toggle="offcanvas" data-bs-target="#searchbar" class="pop point">Search all properties</small> -->
+            <a :href="utilities.env('/properties')" class="icon-link icon-link-hover" href="/properties">
+                <small>Search all properties</small>
                 <i class="bi bi-arrow-right"></i>
-            </a> -->
+            </a>
         </div>
         
     </div>
