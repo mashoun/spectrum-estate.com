@@ -27,11 +27,23 @@ export default {
                     title:'Warehouse',
                     url:`${utilities.env('/properties/?type=Warehouse')}`
                 },
+                {
+                    title:'Chalet',
+                    url:`${utilities.env('/properties/?type=Chalet')}`
+                },
+                {
+                    title:'Buildings',
+                    url:`${utilities.env('/properties/?type=Buildings')}`
+                },
             ],
             checkAlso:[
                 {
                     title:'Home Page',
                     url:`${utilities.env('/')}`
+                },
+                {
+                    title:'Join the team',
+                    url:'https://forms.gle/pCwePLy4XUXVnqLfA'
                 },
                 {
                     title:'Our Consultants',
