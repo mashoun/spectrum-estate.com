@@ -5,7 +5,7 @@ const app = Vue.createApp({
         return {
             title: 'Spectrum',
             spinner: false,
-            api: 'https://script.google.com/macros/s/AKfycbyV7JY10hCStCNKVo_mLbhNcAzXFkHviUFYStVM6xdjWhkRJ4LZiyzQg2K7XJU8s3YpBw/exec',
+            api: 'https://script.google.com/macros/s/AKfycbzNtqjVjdGvvAXHUUF1WqSh3OeZFE470IJlX6JIDNDRt5twGoBRLSJ1adnu3eUZn5QGKw/exec',
             // propertyIsFound:false,
             store,
             utilities

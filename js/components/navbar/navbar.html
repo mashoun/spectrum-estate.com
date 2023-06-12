@@ -1,10 +1,13 @@
-<header class="w-100 text-light p-3 position-fixed z-2 top-0 start-0 d-flex justify-content-between align-items-center">
+<header class="w-100 text-light px-3 py-2 position-fixed z-2 top-0 start-0 d-flex justify-content-between align-items-center">
     <section>
       <a class="no-decoration" :href="utilities.env('/')" >
         <div class="d-flex align-items-center gap-2">
           
-          <img :src="store.profile.contact.logo" alt="logo" width="50" class="img-fluid">
-          <h1 class="fs-3 ls-2 bebas text-shadoww m-0 text-center text-md-start m-0">Spectrum Real Estate</h1>
+          <img :src="store.profile.contact.logo" alt="logo" width="80" class="img-fluid">
+          <div class="d-flex flex-column">
+              <h1 class="fs-3 ls-2 bebas text-shadoww m-0 text-center text-md-start m-0">Spectrum Real Estate</h1>
+              <span class="fs-smaller">Power of diversity</span>
+          </div>
         </div>
       </a>
     </section>
@@ -14,9 +17,44 @@
       <a href="#"><i class="bi bi-facebook"></i></a>
       <a href="#"><i class="bi bi-instagram"></i></a>
     </nav> -->
-
-    <search-bar :properties="store.profile.properties">
-      <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button>
-    </search-bar>
+    <div class="d-flex align-items-center gap-2">
+      
+      <div class="dropdown">
+        <button class="btn btn-warning"  data-bs-toggle="dropdown">Contact</button>
+        <ul class="dropdown-menu">
+          <li>
+            <a :href="'https://wa.me/'+store.profile.contact.whatsapp" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+                <i class="fs-5 bi bi-whatsapp text-secondary"></i>
+                <span>+{{store.profile.contact.number}}</span>
+            </a>
+          </li>
+          <li>
+            <a :href="'mailto:'+store.profile.contact.email" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+              <i class="fs-5 bi bi-envelope text-secondary"></i>
+              <span>{{store.profile.contact.email}}</span>
+            </a>
+          </li>
+          <li>
+            <a :href="store.profile.contact.facebook" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+              <i class="fs-5 bi bi-facebook text-secondary"></i>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            
+            <a :href="store.profile.contact.instagram" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+              <i class="fs-5 bi bi-instagram text-secondary"></i>
+              <span>Instagram</span>
+            </a>
+          </li>
+          
+        
+        
+        </ul>
+      </div>
+      <search-bar :properties="store.profile.properties">
+        <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button>
+      </search-bar>
+    </div>
    
 </header>

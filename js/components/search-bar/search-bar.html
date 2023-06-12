@@ -1,5 +1,5 @@
 <slot></slot>
-<aside class="offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" style="width:350px;"  tabindex="-1" id="searchbar" aria-labelledby="searchbarLabel">
+<aside class="col-12 col-lg-6 offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" style="width:350px;"  tabindex="-1" id="searchbar" aria-labelledby="searchbarLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title pop" id="searchbarLabel">Find Your Perfect Property</h5>
     <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
@@ -39,7 +39,7 @@
     </div>
     <div class="px-1 d-flex gap-2 flex-column">
       <label class="form-label ls-2">Area {{property.area}} m2</label>
-      <input type="range" v-model="property.area" class="form-range" min="100" max="1000" step="50">
+      <input type="range" v-model="property.area" class="form-range" min="100" max="100000" step="50">
       <label class="form-label ls-2">Bedrooms {{property.bedrooms}}</label>
       <input type="range" v-model="property.bedrooms" class="form-range" min="1" max="20" step="1">
       <label class="form-label ls-2">Bathrooms {{property.bathrooms}}</label>

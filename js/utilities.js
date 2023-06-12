@@ -41,9 +41,26 @@ function addCommas(number) {
     return parts.join('.');
 }
 
+function timo(date) {
+    dayjs.extend(window.dayjs_plugin_relativeTime);
+    dayjs();
+    const futureDate = dayjs(date);
+    // console.log(futureDate.fromNow());
+    return futureDate.fromNow()
+}
+
+function dateId(dateString) {
+    // Remove non-numeric characters from the date string
+    var formattedDate = dateString.replace(/[^0-9]/g, '');
+
+    return formattedDate;
+}
+
 export default {
     getPage,
     getDistinctValues,
     addCommas,
-    env
+    env,
+    timo,
+    dateId
 }
