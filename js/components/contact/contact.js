@@ -34,7 +34,7 @@ export default {
                     url:`${utilities.env('/')}`
                 },
                 {
-                    title:'Our Agents',
+                    title:'Our Consultants',
                     url:`${utilities.env('/#agents')}`
                 },
                 {

@@ -9,50 +9,90 @@
                 <span class="text-secondary text-fade">{{myProperty.location}}</span>
             </section>
         </div>
+        <!-- <div class="col-12">
+            <h6 class="px-1 font-monospace text-secondary fs-small">Reference ID : {{utilities.dateId(myProperty.date)}}</h6>
+        </div> -->
         <div class="col-12 col-lg-6">
             <swiper-container id="property-page-swiper" :init="initSwiper">
                 <div class="swiper-slide" v-for="src in myProperty.images.split(',')">
                     <div class="ratio ratio-16x9"><img :src="src" alt="slide" class="img-fluid object-fit-cover rounded"></div>
                 </div>
             </swiper-container>
+            <h6 class="px-1 font-monospace text-secondary fs-small my-3">Reference ID : {{utilities.dateId(myProperty.date)}}</h6>
         </div>
         <div class="col-12 col-lg-6">
 
             <section class="pop d-flex flex-column gap-3">
                 
-                <small class="pop text-secondary ls-2">{{myProperty.type}}</small>
+                <small class="pop text-secondary ls-2">{{myProperty.type}} </small>
                 <div class="d-flex gap-2 align-items-center">
                     <i class="bi bi-geo-alt fill fs-4 text-secondary"></i>
                     <h1 class="m-0 fs-4 text-primary fw-bold ls-2 text-uppercase">{{myProperty.location}}</h1>
                 </div>
-                <p class="text-secondary fs-small mx-2 m-0">Discover a property that redefines what it means to live in luxury, with a suite of amenities that exceed expectations.</p>
+                <p class="text-secondary fs-small mx-2 m-0">{{myProperty.description}} <i class="bi bi-dot"></i> {{utilities.timo(myProperty.date)}}</p>
     
                 <div class="container">
+                    
                     <div class="row bg-warning rounded text-light py-2">
                         <div class="col-3">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall text-dark">AREA</span>
-                                <span class="text-dark fs-small fw-bold">{{myProperty.area}}</span>
+                                <span class="fs-xsmall">AREA</span>
+                                <span class="text-dark fs-small">{{myProperty.area}} m2</span>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall text-dark">BATHROOM</span>
-                                <span class="text-dark fs-small fw-bold">{{myProperty.bathrooms}}</span>
+                                <span class="fs-xsmall">BATHROOM</span>
+                                <span class="text-dark fs-small">{{myProperty.bathrooms}}</span>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall text-dark">BEDS</span>
-                                <span class="text-dark fs-small fw-bold">{{myProperty.bedrooms}}</span>
+                                <span class="fs-xsmall">BEDS</span>
+                                <span class="text-dark fs-small">{{myProperty.bedrooms}}</span>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
                             <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall text-dark">PARKING</span>
-                                <span class="text-dark fs-small fw-bold">{{myProperty.parking}}</span>
+                                <span class="fs-xsmall">PARKING</span>
+                                <span class="text-dark fs-small">{{myProperty.parking}}</span>
                             </div>
                         </div>
+
+                        <!-- For lands -->
+                        <div class="col-3" v-if="myProperty.type == 'Lands'">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="fs-xsmall">Type</span>
+                                <span class="text-dark fs-small">{{myProperty.landType}}</span>
+                            </div>
+                        </div>
+                        <div class="col-3" v-if="myProperty.type == 'Lands'">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="fs-xsmall">Zone</span>
+                                <span class="text-dark fs-small">{{myProperty.landZone}}</span>
+                            </div>
+                        </div>
+                        <div class="col-3" v-if="myProperty.type == 'Lands'">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="fs-xsmall">Slope</span>
+                                <span class="text-dark fs-small">{{myProperty.landSlope}}</span>
+                            </div>
+                        </div>
+
+                        <!-- For Warehouse -->
+                        <div class="col-3" v-if="myProperty.type == 'Warehouse'">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="fs-xsmall">Type</span>
+                                <span class="text-dark fs-small">{{myProperty.warehouseType}}</span>
+                            </div>
+                        </div>
+                        <div class="col-3" v-if="myProperty.type == 'Warehouse'">
+                            <div class="d-flex flex-column gap-1">
+                                <span class="fs-xsmall">Height</span>
+                                <span class="text-dark fs-small">{{myProperty.warehouseHeight}}</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <ul class="list-group list-group-flush fs-small rounded">

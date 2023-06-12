@@ -4,11 +4,12 @@
             <img :src="data.thumbnail" :alt="data.location" class="skeleton img-zoom img-brightness rounded img-fluid object-fit-cover">
         </div>
         <div class="w-100 position-absolute bottom-0 p-3 d-flex flex-column gap-2">
-            <small class="fs-smaller text-light text-uppercase">spectrum real estate<i class="bi bi-dot"></i><span class="badge text-bg-warning">{{data.type}}</span></small>
+            <small class="fs-smaller text-light text-uppercase">spectrum real estate<i class="bi bi-dot"></i><span class="badge text-bg-warning">{{data.type}}</span><i v-if="data.isHotDeal" class="bi bi-dot"></i><span v-if="data.isHotDeal" class="badge text-bg-danger ls-2">HOT DEAL</span></small>
             <h4 class="fs-4 text-light pop text-fade d-flex align-items-center gap-2">
                 <span class="material-symbols-outlined">location_on</span>
                 <span class="m-0 text-fade text-underline">{{data.location}}</span>
             </h4>
+            
             <div class="container">
                 <div class="row bg-glass rounded text-light py-2">
                     <div class="col-3">
@@ -17,29 +18,65 @@
                             <span class="text-warning fs-small">{{data.area}} m2</span>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3" v-if="data.type == 'Apartments' || data.type == 'Villas' || data.type == 'Chalet' || data.type == 'Offices' || data.type == 'Buildings'">
                         <div class="d-flex flex-column gap-1">
                             <span class="fs-xsmall">BATHROOM</span>
                             <span class="text-warning fs-small">{{data.bathrooms}}</span>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3" v-if="data.type == 'Apartments' || data.type == 'Villas' || data.type == 'Chalet' || data.type == 'Offices' || data.type == 'Buildings'">
                         <div class="d-flex flex-column gap-1">
                             <span class="fs-xsmall">BEDS</span>
                             <span class="text-warning fs-small">{{data.bedrooms}}</span>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3" v-if="data.type == 'Apartments' || data.type == 'Villas' || data.type == 'Chalet' || data.type == 'Offices' || data.type == 'Buildings'">
                         <div class="d-flex flex-column gap-1">
                             <span class="fs-xsmall">PARKING</span>
                             <span class="text-warning fs-small">{{data.parking}}</span>
                         </div>
                     </div>
+
+                    <!-- For lands -->
+                    <div class="col-3" v-if="data.type == 'Lands'">
+                        <div class="d-flex flex-column gap-1">
+                            <span class="fs-xsmall">Type</span>
+                            <span class="text-warning fs-small">{{data.landType}}</span>
+                        </div>
+                    </div>
+                    <div class="col-3" v-if="data.type == 'Lands'">
+                        <div class="d-flex flex-column gap-1">
+                            <span class="fs-xsmall">Zone</span>
+                            <span class="text-warning fs-small">{{data.landZone}}</span>
+                        </div>
+                    </div>
+                    <div class="col-3" v-if="data.type == 'Lands'">
+                        <div class="d-flex flex-column gap-1">
+                            <span class="fs-xsmall">Slope</span>
+                            <span class="text-warning fs-small">{{data.landSlope}}</span>
+                        </div>
+                    </div>
+
+                    <!-- For Warehouse -->
+                    <div class="col-3" v-if="data.type == 'Warehouse'">
+                        <div class="d-flex flex-column gap-1">
+                            <span class="fs-xsmall">Type</span>
+                            <span class="text-warning fs-small">{{data.warehouseType}}</span>
+                        </div>
+                    </div>
+                    <div class="col-3" v-if="data.type == 'Warehouse'">
+                        <div class="d-flex flex-column gap-1">
+                            <span class="fs-xsmall">Height</span>
+                            <span class="text-warning fs-small">{{data.warehouseHeight}}</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <button class="btn btn-sm btn-light fw-bold ls-2 text-uppercase"><span class="pop">For {{data.status}} - {{data.price}} $</span></button>
-    
+            <!-- <small class="fs-smaller text-light text-center font-monospace">{{utilities.dateId(data.date)}}</small> -->
         </div>
+        <small class="position-absolute top-0 p-3 fs-xsmall text-light">{{utilities.timo(data.date)}}</small>
     
     </section>
 </a>

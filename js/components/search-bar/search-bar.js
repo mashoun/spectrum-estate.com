@@ -38,7 +38,7 @@ export default {
             return utilities.getDistinctValues(PropertyStatus)
         },
         maxPrice() {
-            return this.property.status.toLowerCase() == 'rent' ? 10000 : 10000000;
+            return this.property.status.toLowerCase() == 'rent' ? 100000 : 10000000;
         },
         maxPriceWithComma() {
             return utilities.addCommas(this.property.price)
