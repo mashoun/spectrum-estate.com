@@ -16,6 +16,9 @@ const app = Vue.createApp({
         filteredProperties() {
             var url = new URL(location.href)
             var fp = this.store.profile.properties
+            if (url.searchParams.get('refId')) fp = fp.filter(p => {
+                if (p.date) return url.searchParams.get('refId') == this.utilities.dateId(p.date)
+            })
             if (url.searchParams.get('type')) fp = fp.filter(p => {
                 if (p.type) return url.searchParams.get('type').toLowerCase() == p.type.toLowerCase()
             })
