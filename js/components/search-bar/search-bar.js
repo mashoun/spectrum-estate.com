@@ -12,6 +12,7 @@ export default {
                 type: '',
                 status: '',
                 price: '',
+                refId:''
             },
         }
     },
@@ -48,6 +49,7 @@ export default {
         },
         query(){
             var url = '?'
+            if(this.property.refId) url += `refId=${this.property.refId}`
             if(this.property.type) url += `type=${this.property.type}`
             if(this.property.location) url += `&location=${this.property.location}`
             if(this.property.status) url += `&status=${this.property.status}`
