@@ -1,7 +1,7 @@
 import utilities from "../../utilities.js"
 import store from "../../store.js"
 export default {
-    template: await utilities.getPage('./js/components/properties/properties.html'),
+    template: await utilities.getPage('./js/components/hot-deals/hot-deals.html'),
     
     data(){
         return{
@@ -38,11 +38,10 @@ export default {
         }
     },
     computed:{
-      notHotDeals(){
-        
-        return this.store.profile.properties.filter(p => {
-          return !p.isHotDeal
-        })
-      }
+        hotDeals(){
+            return this.store.profile.properties.filter(p => {
+                return p.isHotDeal
+            })
+        }
     }
 }

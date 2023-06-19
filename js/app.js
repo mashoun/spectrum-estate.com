@@ -75,6 +75,9 @@ const app = Vue.createApp({
 import searchBar from './components/search-bar/search-bar.js'
 app.component('search-bar', searchBar)
 
+import story from './components/story/story.js'
+app.component('story-section', story)
+
 import swiper from './components/swiper/swiper.js'
 app.component('swiper-container', swiper)
 
@@ -86,6 +89,9 @@ app.component('navbar-section', navbar)
 
 import hero from './components/hero/hero.js'
 app.component('hero-section', hero)
+
+import hotDeals from './components/hot-deals/hot-deals.js'
+app.component('hot-deals', hotDeals)
 
 import property from './components/property/property.js'
 app.component('property', property)
