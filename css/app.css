@@ -210,7 +210,16 @@ nav>a:hover {
     left: 50px;
     background-color: var(--bs-danger);
     font-size: x-small;
-    padding: 0px .3rem;
+    padding: 0px .5rem;
     letter-spacing: 1px;
+    margin: 0;
 
+}
+
+.bg-aswad{
+    background: rgba(0, 0, 0, 0.75);
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
 }

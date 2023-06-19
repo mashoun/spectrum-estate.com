@@ -1,14 +1,14 @@
-<header class="w-100 text-light px-3 py-2 position-fixed z-2 top-0 start-0 d-flex justify-content-between align-items-center">
+<header class="w-100 text-light px-3 py-3 position-fixed z-2 top-0 start-0 d-flex justify-content-between align-items-center">
     <section>
       
         <div class="d-flex align-items-center gap-2">
-          <!-- <story-section> -->
-           <div class="bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 68px;height: 68px;">
+          <story-section>
+           <div @click="store.storySidebar = !store.storySidebar" class="bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 68px;height: 68px;">
             <div class="bg-dark rounded-circle" style="width: 60px;height: 60px;">
               <img :src="store.profile.contact.logo" alt="logo" width="60" class="img-fluid">
             </div>
            </div>
-          <!-- </story-section> -->
+          </story-section>
           <a class="no-decoration" :href="utilities.env('/')" ></a>
             <div class="flex-column d-none d-lg-flex">
                 <h1 class="fs-4 ls-2 bebas text-shadoww m-0 text-center text-md-start m-0">Spectrum Real Estate</h1>
@@ -19,46 +19,8 @@
       
     </section>
     
-    <!-- <nav class="d-none d-md-flex gap-3 align-items-center pop text-uppercase fs-5"> 
-      <a href="#"><i class="bi bi-whatsapp"></i></a>
-      <a href="#"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="bi bi-instagram"></i></a>
-    </nav> -->
     <div class="d-flex align-items-center gap-2">
       
-      <!-- <div class="dropdown">
-        <button class="btn btn-warning"  data-bs-toggle="dropdown">Contact</button>
-        <ul class="dropdown-menu">
-          <li>
-            <a :href="'https://wa.me/'+store.profile.contact.whatsapp" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-                <i class="fs-5 bi bi-whatsapp text-secondary"></i>
-                <span>+{{store.profile.contact.number}}</span>
-            </a>
-          </li>
-          <li>
-            <a :href="'mailto:'+store.profile.contact.email" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-              <i class="fs-5 bi bi-envelope text-secondary"></i>
-              <span>{{store.profile.contact.email}}</span>
-            </a>
-          </li>
-          <li>
-            <a :href="store.profile.contact.facebook" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-              <i class="fs-5 bi bi-facebook text-secondary"></i>
-              <span>Facebook</span>
-            </a>
-          </li>
-          <li>
-            
-            <a :href="store.profile.contact.instagram" class="dropdown-item text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-              <i class="fs-5 bi bi-instagram text-secondary"></i>
-              <span>Instagram</span>
-            </a>
-          </li>
-          
-        
-        
-        </ul>
-      </div> -->
       <a :href="'https://wa.me/'+store.profile.contact.whatsapp" :title="'https://wa.me/'+store.profile.contact.whatsapp" class="btn  btn-outline-light"><i class="bi bi-whatsapp"></i></a>
       <a :href="store.profile.contact.facebook" :title="store.profile.contact.facebook" class="btn  btn-outline-light"><i class="bi bi-facebook"></i></a>
       <a :href="store.profile.contact.instagram" :title="store.profile.contact.instagram" class="btn  btn-outline-light"><i class="bi bi-instagram"></i></a>
