@@ -12,7 +12,7 @@ export default {
             ],
             swiperInit:{
                 autoplay: {
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: false,
                 },
                 loop:true,

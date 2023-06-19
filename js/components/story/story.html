@@ -1,25 +1,25 @@
-<section title="Open story">
+<section>
     <div class="position-relative">
         <slot></slot>
-        <span class="story-count rounded-pill">+99</span>
+        <span v-if="!store.viewedStory && store.profile.stories.length > 0" class="story-count rounded-pill">{{store.profile.stories.length}}</span>
     </div>
-    <aside class="w-100 h-100 position-fixed z-3 top-0 start-0 d-flex justify-content-center align-items-center bg-glass">
-        <swiper-container id="storySwiper" :init="storySwiper">
-            <div class="swiper-slide">
-                <div class="w-50 ratio ratio-3x4">
-                    <img src="https://picsum.photos/1080" alt="story" class="object-fit-contain img-fluid">
+    <aside
+        v-if="store.storySidebar"
+        class="w-100 h-100 position-fixed d-flex justify-content-center align-items-center z-3 top-0 start-0 bg-aswad">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <swiper-container id="storySwiper" :init="storySwiper">
+                        <div class="swiper-slide" v-for="s in store.profile.stories" :key="s">
+                            <div class="ratio ratio-1x1">
+                                <img :src="s.thumbnail" :alt="s.id" class="skeleton object-fit-contain img-fluid">
+                            </div>
+                        </div>
+                    </swiper-container>
+                    <button class="w-100 btn btn-sm btn-secondary" @click="toggleStory">Back</button>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="w-50 ratio ratio-3x4">
-                    <img src="https://picsum.photos/1080" alt="story" class="object-fit-contain img-fluid">
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="ratio ratio-3x4">
-                    <img src="https://picsum.photos/1080" alt="story" class="object-fit-contain img-fluid">
-                </div>
-            </div>
-        </swiper-container>
+        </div>
     </aside>
 </section>
