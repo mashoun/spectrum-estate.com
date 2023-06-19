@@ -6,24 +6,18 @@ export default {
         return{
             store,
             slides:[
-                './img/day3a-min.jpg',
-                './img/door-min.jpg',
+                // './img/day3a-min.jpg',
+                // './img/door-min.jpg',
                 './img/sama-min.jpg',
             ],
             swiperInit:{
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                loop:true,
+                // autoplay: {
+                //     delay: 3000,
+                //     disableOnInteraction: false,
+                // },
+                // loop:true,
                 effect:'fade',
                 grabCursor: true,
-                cubeEffect: {
-                  shadow: true,
-                  slideShadows: true,
-                  shadowOffset: 20,
-                  shadowScale: 0.94,
-                },
             }
         }
     },
