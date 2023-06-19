@@ -1,15 +1,22 @@
 <header class="w-100 text-light px-3 py-2 position-fixed z-2 top-0 start-0 d-flex justify-content-between align-items-center">
     <section>
-      <a class="no-decoration" :href="utilities.env('/')" >
-        <div class="d-flex align-items-center">
-          
-          <img :src="store.profile.contact.logo" alt="logo" width="70" class="img-fluid">
-          <div class="flex-column d-none d-lg-flex">
-              <h1 class="fs-4 ls-2 bebas text-shadoww m-0 text-center text-md-start m-0">Spectrum Real Estate</h1>
-              <span class="fs-xsmall text-warning ls-2 pop">Power of diversity</span>
-          </div>
+      
+        <div class="d-flex align-items-center gap-2">
+          <!-- <story-section> -->
+           <div class="bg-warning rounded-circle d-flex justify-content-center align-items-center" style="width: 68px;height: 68px;">
+            <div class="bg-dark rounded-circle" style="width: 60px;height: 60px;">
+              <img :src="store.profile.contact.logo" alt="logo" width="60" class="img-fluid">
+            </div>
+           </div>
+          <!-- </story-section> -->
+          <a class="no-decoration" :href="utilities.env('/')" ></a>
+            <div class="flex-column d-none d-lg-flex">
+                <h1 class="fs-4 ls-2 bebas text-shadoww m-0 text-center text-md-start m-0">Spectrum Real Estate</h1>
+                <i class="fs-xsmall text-warning ls-2 pop fw-bold text-uppercase">Power of diversity</i>
+            </div>
+          </a>
         </div>
-      </a>
+      
     </section>
     
     <!-- <nav class="d-none d-md-flex gap-3 align-items-center pop text-uppercase fs-5"> 
@@ -19,7 +26,7 @@
     </nav> -->
     <div class="d-flex align-items-center gap-2">
       
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <button class="btn btn-warning"  data-bs-toggle="dropdown">Contact</button>
         <ul class="dropdown-menu">
           <li>
@@ -51,10 +58,15 @@
         
         
         </ul>
-      </div>
+      </div> -->
+      <a :href="'https://wa.me/'+store.profile.contact.whatsapp" :title="'https://wa.me/'+store.profile.contact.whatsapp" class="btn  btn-outline-light"><i class="bi bi-whatsapp"></i></a>
+      <a :href="store.profile.contact.facebook" :title="store.profile.contact.facebook" class="btn  btn-outline-light"><i class="bi bi-facebook"></i></a>
+      <a :href="store.profile.contact.instagram" :title="store.profile.contact.instagram" class="btn  btn-outline-light"><i class="bi bi-instagram"></i></a>
+      <a :href="'mailto:'+store.profile.contact.email" :title="'mailto:'+store.profile.contact.email" class="btn  btn-outline-light"><i class="bi bi-envelope"></i></a>
       <search-bar :properties="store.profile.properties">
-        <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button>
+        <button title="Search properties" class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#searchbar" ><i class="bi bi-search"></i></button>
       </search-bar>
+      
     </div>
    
 </header>
