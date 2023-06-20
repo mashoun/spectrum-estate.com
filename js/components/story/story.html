@@ -13,7 +13,7 @@
                     <swiper-container id="storySwiper" :init="storySwiper">
                         <div class="swiper-slide" v-for="s in store.profile.stories" :key="s">
                             <div class="ratio ratio-1x1">
-                                <img :src="s.thumbnail" :alt="s.id" class="skeleton object-fit-contain img-fluid">
+                                <img :src="s.thumbnail" :alt="s.id" class="skeleton object-fit-cover img-fluid">
                             </div>
                         </div>
                     </swiper-container>
