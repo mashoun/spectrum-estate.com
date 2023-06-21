@@ -10,6 +10,12 @@
     <div class="">
       <input type="text" v-model="property.refId" class="form-control" placeholder="Search by Reference ID">
     </div>
+
+    <div class="form-check form-switch d-flex align-items-center pop gap-3">
+      <input class="form-check-input text-warning" v-model="property.isHotDeal" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label fs-6" for="flexSwitchCheckDefault">Hot Deals</label>
+    </div>
+
     <div class="">
       <h6>Property type ?</h6>
       <div class="input-group">

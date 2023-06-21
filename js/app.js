@@ -26,6 +26,14 @@ const app = Vue.createApp({
                     return url.searchParams.get('refId') == this.utilities.dateId(p.date).trim()
                 }
                 
+            }) 
+            if (url.searchParams.get('isHotDeal')) fp = fp.filter(p => {
+                
+                // return p.isHotDeal
+                // console.log(p.isHotDeal);
+                // console.log(url.searchParams.get('hotDeal'));
+                return p.isHotDeal
+                
             })
             if (url.searchParams.get('type')) fp = fp.filter(p => {
                 if (p.type) return url.searchParams.get('type').toLowerCase() == p.type.toLowerCase()
