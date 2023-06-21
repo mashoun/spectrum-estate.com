@@ -20,7 +20,7 @@ export default {
         recentLocations() {
             var locations = []
             this.properties.forEach(p => {
-                locations.push(p.location)
+                locations.push(p.location.trim())
             });
             return utilities.getDistinctValues(locations)
         },

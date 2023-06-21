@@ -23,7 +23,7 @@ const app = Vue.createApp({
                 
                 if (p.date) {
                     // console.log(this.utilities.dateId(p.date));
-                    return url.searchParams.get('refId') == this.utilities.dateId(p.date)
+                    return url.searchParams.get('refId') == this.utilities.dateId(p.date).trim()
                 }
                 
             })
@@ -32,7 +32,7 @@ const app = Vue.createApp({
             })
 
             if (url.searchParams.get('location')) fp = fp.filter(p => {
-                if (p.location) return url.searchParams.get('location').toLowerCase() == p.location.toLowerCase()
+                if (p.location) return url.searchParams.get('location').toLowerCase().trim() == p.location.toLowerCase().trim()
             })
             if (url.searchParams.get('price')) fp = fp.filter(p => {
                 if (p.price) return parseFloat(url.searchParams.get('price')) >= parseFloat(p.price)
