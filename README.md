@@ -7,14 +7,12 @@ A responsive and dynamic website was developed with a simple user interface that
 ## Developer Guide
 1. Setup
 2. Development
-	A. Technical Stack
-	B. Accessibility
 3. Deployment
 4. Support
 
 ## Setup
 1. Open Google Chrome and log in using the project-associated email account.
-2. Obtain the project source code by downloading it as a .zip file or cloning it with: `git clone https://github.com/mashoun/spectrum-estate.com.git`
+2. Obtain the project source code by downloading it as a .zip file or cloning it with: `git clone <repo_url>`
 3. Open the project in a text editor like VS Code.
 4. Install the Live Server extension in VS Code.
 5. Open the `/index.html` file and click on the _Go Live_ button in Live Server to launch the project locally.
