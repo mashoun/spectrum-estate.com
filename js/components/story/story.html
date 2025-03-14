@@ -13,11 +13,15 @@
                     <swiper-container id="storySwiper" :init="storySwiper">
                         <div class="swiper-slide" v-for="s in store.profile.stories" :key="s">
                             <div class="ratio ratio-1x1">
-                                <img :src="s.thumbnail" :alt="s.id" class="skeleton object-fit-cover img-fluid">
+                                <img :src="s.thumbnail" :alt="s.id" class="object-fit-contain img-fluid">
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
                         </div>
                     </swiper-container>
-                    <button class="w-100 btn btn-sm btn-secondary" @click="toggleStory">Back</button>
+                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <button class="w-100 btn btn-sm btn-secondary" @click="toggleStory">Close</button>
                 </div>
             </div>
         </div>
