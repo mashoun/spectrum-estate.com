@@ -63,7 +63,7 @@ const app = Vue.createApp({
             })
 
             // this.propertyIsFound = true
-            return fp
+            return fp.reverse()
         }
     },
     methods: {
