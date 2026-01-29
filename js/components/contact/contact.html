@@ -1,68 +1,62 @@
 <section class="container">
-    <div class="row gy-5 gx-3 justify-content-between pop">
-        <section class="col-md-12 col-lg-5">
-            <div class="d-flex flex-column gap-1">
-                <h2 class="fs-4 text-light opacity-75 m-0">Spectrum Real Estate</h2>
-                <p class="fs-smaller text-light opacity-50">Indulge in the ultimate expression of refined living as you discover Lebanon's most exquisite properties.</p>
-                <div class="d-flex flex-column gap-2 text-warning-hover-links">
-                    <a :href="'mailto:'+store.profile.contact.email" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-                        <i class="fs-5 bi bi-envelope text-secondary"></i>
-                        <span>{{store.profile.contact.email}}</span>
-                    </a>
-                    <a :href="'https://wa.me/'+store.profile.contact.whatsapp" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-                        <i class="fs-5 bi bi-whatsapp text-secondary"></i>
-                        <span>+{{store.profile.contact.number}}</span>
-                    </a>
-                    <a :href="store.profile.contact.facebook" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-                        <i class="fs-5 bi bi-facebook text-secondary"></i>
-                        <span>Facebook</span>
-                    </a>
-                    <a :href="store.profile.contact.instagram" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
-                        <i class="fs-5 bi bi-instagram text-secondary"></i>
-                        <span>Instagram</span>
-                    </a>
-                    
-                    <span class="text-secondary d-flex gap-3 align-items-center">
-                        <i class="fs-5 bi bi-geo-alt-fill text-secondary"></i>
-                        <span>{{store.profile.contact.address}}</span>
-                    </span>
-                </div>
-            </div>
-        </section>
-        <section class="col-md-12 col-lg-3">
-            <div class="d-flex flex-column gap-1">
-                
-                <h2 class="fs-4 text-light opacity-75 m-0">Our Properties</h2>
-                <p class="fs-smaller text-light opacity-50">Discover the pinnacle of luxury living with our properties.</p>
-                <div class="d-flex flex-column gap-2 text-warning-hover-links">
-                    <a 
-                        v-for="link in links" :key="link"
-                        :href="link.url" 
-                        class="link-underline-opacity-0 link-underline text-secondary m-0 d-flex align-items-center gap-1">
-                        <span class="material-symbols-outlined fs-4">link</span>
-                        <span class="text-fade">{{link.title}}</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="col-md-12 col-lg-3">
-            <div class="d-flex flex-column gap-1">
-                
-                <h2 class="fs-4 text-light opacity-75 m-0">Check also</h2>
-                <p class="fs-smaller text-light opacity-50">Expand Your Options - Connecting you to the resources you need.</p>
-                <div class="d-flex flex-column gap-2 text-warning-hover-links">
-                    <a 
-                        v-for="l in checkAlso" :key="l"
-                        :href="l.url" 
-                        class="link-underline-opacity-0 link-underline text-secondary m-0 d-flex align-items-center gap-1">
-                        <span class="material-symbols-outlined fs-4">link</span>
-                        <span class="text-fade">{{l.title}}</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
+  <div class="row gy-5 gx-3 justify-content-between pop">
+    <section class="col-md-12 col-lg-5">
+      <div class="d-flex flex-column gap-1">
+        <h2 class="fs-4 text-light opacity-75 m-0">Spectrum Real Estate</h2>
+        <p class="fs-smaller text-light opacity-50">Indulge in the ultimate expression of refined living as you discover Lebanon's most exquisite properties.</p>
+        <div class="d-flex flex-column gap-2 text-warning-hover-links">
+          <a :href="'mailto:'+store.profile.contact.email" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+            <i class="fs-5 bi bi-envelope text-secondary"></i>
+            <span>{{store.profile.contact.email}}</span>
+          </a>
+          <a :href="'https://wa.me/'+store.profile.contact.whatsapp" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+            <i class="fs-5 bi bi-whatsapp text-secondary"></i>
+            <span>+{{store.profile.contact.number}}</span>
+          </a>
+          <a :href="store.profile.contact.facebook" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+            <i class="fs-5 bi bi-facebook text-secondary"></i>
+            <span>Facebook</span>
+          </a>
+          <a :href="store.profile.contact.instagram" class="text-secondary link-light link-underline-opacity-0 d-flex gap-3 align-items-center">
+            <i class="fs-5 bi bi-instagram text-secondary"></i>
+            <span>Instagram</span>
+          </a>
+
+          <span class="text-secondary d-flex gap-3 align-items-center">
+            <i class="fs-5 bi bi-geo-alt-fill text-secondary"></i>
+            <span>{{store.profile.contact.address}}</span>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section class="col-md-12 col-lg-3">
+      <div class="d-flex flex-column gap-1">
+        <h2 class="fs-4 text-light opacity-75 m-0">Our Properties</h2>
+        <p class="fs-smaller text-light opacity-50">Discover the pinnacle of luxury living with our properties.</p>
+        <div class="d-flex flex-column gap-2 text-warning-hover-links">
+          <a v-for="link in links" :key="link" :href="link.url" class="link-underline-opacity-0 link-underline text-secondary m-0 d-flex align-items-center gap-1">
+            <span class="material-symbols-outlined fs-4">link</span>
+            <span class="text-fade">{{link.title}}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="col-md-12 col-lg-3">
+      <div class="d-flex flex-column gap-1">
+        <h2 class="fs-4 text-light opacity-75 m-0">Check also</h2>
+        <p class="fs-smaller text-light opacity-50">Expand Your Options - Connecting you to the resources you need.</p>
+        <div class="d-flex flex-column gap-2 text-warning-hover-links">
+          <a v-for="l in checkAlso" :key="l" :href="l.url" class="link-underline-opacity-0 link-underline text-secondary m-0 d-flex align-items-center gap-1">
+            <span class="material-symbols-outlined fs-4">link</span>
+            <span class="text-fade">{{l.title}}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 </section>
 
-<hr class="container my-4 text-light">
-<a class="text-secondary pop link-underline link-underline-opacity-0 text-center" href="https://linkedin.com/in/mashoun"><h6 class="fs-smaller">Developed by Mashoun</h6></a>
+<hr class="container my-4 text-light" />
+<!-- just all rights reserved -->
+<p class="text-light opacity-50 text-center">All rights reserved</p>
+<!-- <a class="text-secondary pop link-underline link-underline-opacity-0 text-center" href="https://linkedin.com/in/mashoun"><h6 class="fs-smaller">Developed by Mashoun</h6></a> -->

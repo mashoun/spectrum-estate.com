@@ -1,118 +1,112 @@
 <section v-if="myProperty.id" class="container">
-    <div class="row justify-content-between g-3">
-        <div class="col-12">
-            <section class="w-100 mb-3 bg-light shadow-sm rounded d-flex align-items-center fs-small pop p-3">
-                <a :href="utilities.env('/')">HOME</a>
-                <i class="bi bi-chevron-compact-right"></i>
-                <a :href="utilities.env('/properties')" class="text-primary opacity-75">Properties</a>
-                <i class="bi bi-chevron-compact-right"></i>
-                <span class="text-secondary text-fade">{{myProperty.location}}</span>
-            </section>
-        </div>
-        <!-- <div class="col-12">
+  <div class="row justify-content-between g-3">
+    <div class="col-12">
+      <section class="w-100 mb-3 bg-light shadow-sm rounded d-flex align-items-center fs-small pop p-3">
+        <a :href="utilities.env('/')">HOME</a>
+        <i class="bi bi-chevron-compact-right"></i>
+        <a :href="utilities.env('/properties')" class="text-primary opacity-75">Properties</a>
+        <i class="bi bi-chevron-compact-right"></i>
+        <span class="text-secondary text-fade">{{myProperty.location}}</span>
+      </section>
+    </div>
+    <!-- <div class="col-12">
             <h6 class="px-1 font-monospace text-secondary fs-small">Reference ID : {{utilities.dateId(myProperty.date)}}</h6>
         </div> -->
-        <div class="col-12 col-lg-6">
-            <swiper-container id="property-page-swiper" :init="initSwiper">
-                <div class="swiper-slide" v-for="src in myProperty.images.split(',')">
-                    <div class="ratio ratio-16x9"><img :src="src" alt="slide" class="img-fluid object-fit-cover rounded"></div>
-                </div>
-            </swiper-container>
-            <h6 class="px-1 font-monospace text-secondary fs-small my-3">Reference ID : {{utilities.dateId(myProperty.date)}}</h6>
+    <div class="col-12 col-lg-6">
+      <swiper-container id="property-page-swiper" :init="initSwiper">
+        <div class="swiper-slide" v-for="src in myProperty.images.split(',')">
+          <div class="ratio ratio-16x9"><img :src="src" alt="slide" class="img-fluid object-fit-cover rounded" /></div>
         </div>
-        <div class="col-12 col-lg-6">
-
-            <section class="pop d-flex flex-column gap-3">
-                
-                <small class="pop text-secondary ls-2">{{myProperty.type}} </small>
-                <div class="d-flex gap-2 align-items-center">
-                    <i class="bi bi-geo-alt fill fs-4 text-secondary"></i>
-                    <h1 class="m-0 fs-4 text-primary fw-bold ls-2 text-uppercase">{{myProperty.location}}</h1>
-                </div>
-                <p class="text-secondary fs-small mx-2 m-0">{{myProperty.description}} <i class="bi bi-dot"></i> {{utilities.timo(myProperty.date)}}</p>
-    
-                <div class="container">
-                    
-                    <div class="row bg-warning rounded text-light py-2">
-                        <div class="col-3">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">AREA</span>
-                                <span class="text-dark fs-small">{{myProperty.area}} m2</span>
-                            </div>
-                        </div>
-                        <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">BATHROOM</span>
-                                <span class="text-dark fs-small">{{myProperty.bathrooms}}</span>
-                            </div>
-                        </div>
-                        <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">BEDS</span>
-                                <span class="text-dark fs-small">{{myProperty.bedrooms}}</span>
-                            </div>
-                        </div>
-                        <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">PARKING</span>
-                                <span class="text-dark fs-small">{{myProperty.parking}}</span>
-                            </div>
-                        </div>
-
-                        <!-- For lands -->
-                        <div class="col-3" v-if="myProperty.type == 'Lands'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">Type</span>
-                                <span class="text-dark fs-small">{{myProperty.landType}}</span>
-                            </div>
-                        </div>
-                        <div class="col-3" v-if="myProperty.type == 'Lands'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">Zone</span>
-                                <span class="text-dark fs-small">{{myProperty.landZone}}</span>
-                            </div>
-                        </div>
-                        <div class="col-3" v-if="myProperty.type == 'Lands'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">Slope</span>
-                                <span class="text-dark fs-small">{{myProperty.landSlope}}</span>
-                            </div>
-                        </div>
-
-                        <!-- For Warehouse -->
-                        <div class="col-3" v-if="myProperty.type == 'Warehouse'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">Type</span>
-                                <span class="text-dark fs-small">{{myProperty.warehouseType}}</span>
-                            </div>
-                        </div>
-                        <div class="col-3" v-if="myProperty.type == 'Warehouse'">
-                            <div class="d-flex flex-column gap-1">
-                                <span class="fs-xsmall">Height</span>
-                                <span class="text-dark fs-small">{{myProperty.warehouseHeight}}</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <ul class="list-group list-group-flush fs-small rounded">
-                    <li class="list-group-item ls-2 fw-bold">Amenities:</li>
-                    <li class="list-group-item text-secondary" v-for="a in myProperty.amenities.split(',')" :key="a"><i class="bi bi-check2"></i> {{a}}</li>
-                </ul>
-                <a :href="'https://wa.me/'+store.profile.contact.whatsapp" class="btn btn-sm btn-outline-dark d-flex gap-2 align-items-center justify-content-center">
-                    
-                    <span class="m-0">For {{myProperty.status}} - {{myProperty.price}} $</span>
-                </a>
-            </section>
-
+      </swiper-container>
+      <h6 class="px-1 font-monospace text-secondary fs-small my-3">Reference ID : {{utilities.dateId(myProperty.date)}}</h6>
+    </div>
+    <div class="col-12 col-lg-6">
+      <section class="pop d-flex flex-column gap-3">
+        <small class="pop text-secondary ls-2">{{myProperty.type}} </small>
+        <div class="d-flex gap-2 align-items-center">
+          <i class="bi bi-geo-alt fill fs-4 text-secondary"></i>
+          <h1 class="m-0 fs-4 text-primary fw-bold ls-2 text-uppercase">{{myProperty.location}}</h1>
         </div>
-    </div>  
+        <p class="text-secondary fs-small mx-2 m-0">{{myProperty.description}} <i class="bi bi-dot"></i> {{utilities.timo(myProperty.date)}}</p>
+
+        <div class="container">
+          <div class="row bg-warning rounded text-light py-2">
+            <div class="col-3">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">AREA</span>
+                <span class="text-dark fs-small">{{myProperty.area}} m2</span>
+              </div>
+            </div>
+            <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">BATHROOM</span>
+                <span class="text-dark fs-small">{{myProperty.bathrooms}}</span>
+              </div>
+            </div>
+            <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">BEDS</span>
+                <span class="text-dark fs-small">{{myProperty.bedrooms}}</span>
+              </div>
+            </div>
+            <div class="col-3" v-if="myProperty.type == 'Apartments' || myProperty.type == 'Villas' || myProperty.type == 'Chalet' || myProperty.type == 'Offices' || myProperty.type == 'Buildings'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">PARKING</span>
+                <span class="text-dark fs-small">{{myProperty.parking}}</span>
+              </div>
+            </div>
+
+            <!-- For lands -->
+            <div class="col-3" v-if="myProperty.type == 'Lands'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">Type</span>
+                <span class="text-dark fs-small">{{myProperty.landType}}</span>
+              </div>
+            </div>
+            <div class="col-3" v-if="myProperty.type == 'Lands'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">Zone</span>
+                <span class="text-dark fs-small">{{myProperty.landZone}}</span>
+              </div>
+            </div>
+            <div class="col-3" v-if="myProperty.type == 'Lands'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">Slope</span>
+                <span class="text-dark fs-small">{{myProperty.landSlope}}</span>
+              </div>
+            </div>
+
+            <!-- For Warehouse -->
+            <div class="col-3" v-if="myProperty.type == 'Warehouse'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">Type</span>
+                <span class="text-dark fs-small">{{myProperty.warehouseType}}</span>
+              </div>
+            </div>
+            <div class="col-3" v-if="myProperty.type == 'Warehouse'">
+              <div class="d-flex flex-column gap-1">
+                <span class="fs-xsmall">Height</span>
+                <span class="text-dark fs-small">{{myProperty.warehouseHeight}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush fs-small rounded">
+          <li class="list-group-item ls-2 fw-bold">Amenities:</li>
+          <li class="list-group-item text-secondary" v-for="a in myProperty.amenities.split(',')" :key="a"><i class="bi bi-check2"></i> {{a}}</li>
+        </ul>
+        <a :href="'https://wa.me/'+store.profile.contact.whatsapp" class="btn btn-sm btn-success d-flex gap-2 align-items-center justify-content-center">
+          <span class="m-0">Continue with Agent on Whatsapp - {{myProperty.price}} $</span>
+        </a>
+      </section>
+    </div>
+  </div>
 </section>
 <section v-if="invalidProperty || !myProperty.id" class="container">
-    <div class="row">
-        <div class="col-12 d-flex justify-content-center align-items-center flex-column gap-3 my-5">
-          <span class="material-symbols-outlined fs-1">real_estate_agent</span>
-          <h6 class="pop fs-6">No such Property <i class="bi bi-dot"></i> <a :href="utilities.env('/')">back</a> </h6>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center align-items-center flex-column gap-3 my-5">
+      <span class="material-symbols-outlined fs-1">real_estate_agent</span>
+      <h6 class="pop fs-6">No such Property <i class="bi bi-dot"></i> <a :href="utilities.env('/')">back</a></h6>
+    </div>
+  </div>
 </section>
